@@ -28,8 +28,4 @@ I'm a researcher at the [Jožef Stefan Insitute][job] who is interested in all m
 
 [![ErikNovak's github stats](https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=buefy&count_private=true)](https://github.com/eriknovak)
 
-
-<br />
-<br />
-
 [job]: https://ailab.ijs.si/
