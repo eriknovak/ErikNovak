@@ -1,6 +1,6 @@
 ### Hi, I'm Erik 👋🏼 
 
-I'm a researcher at the [Jožef Stefan Insitute][job] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. Cross-lingual language models. I'm passionate in developing machine learning models and software that can be used for various tasks and in both scientific and business domains.
+I'm a researcher at the [Jožef Stefan Insitute][job] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. Cross-lingual language models, as well as (semi-)automatic text processing and visualization. I'm passionate in developing machine learning models and software that can be used for various tasks and in both scientific and business domains.
 
 
 #### Languages and Tools:
@@ -18,23 +18,6 @@ I'm a researcher at the [Jožef Stefan Insitute][job] who is interested in all m
   <img alt="PyTorch" src="https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
   <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white" />
 </p>
-
-
-
-<!--
-**ErikNovak/ErikNovak** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
 
 <br />
 
