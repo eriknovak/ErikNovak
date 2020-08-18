@@ -43,8 +43,8 @@ My collection of gists is available [here][gists].
 
 <details>
   <summary>:zap: <b>Github Statistics</b></summary>
-
-[![ErikNovak's github stats](https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=buefy&count_private=true)](https://github.com/eriknovak)
+  
+  <img align="left" alt="codeSTACKr's Github Stats" src="https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=buefy&hide_border=true" />
 
 </details>
 
