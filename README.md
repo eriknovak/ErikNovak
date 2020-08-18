@@ -21,7 +21,6 @@ I'm a researcher at the [Jožef Stefan Insitute][job] who is interested in all m
 <br />
 <br />
 
----
 
 ### 🔖 Gists
 My collection of gists is available [here][gists].
