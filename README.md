@@ -28,6 +28,9 @@ My collection of gists is available [here][gists].
 
 <br />
 
+<details>
+  <summary>:zap: <b>Recent Github Activity</b></summary>
+  
 <!--START_SECTION:activity-->
 1. 🎉 Merged PR [#2](https://github.com//ErikNovak/template-nodejs-elasticsearch-microservice/pull/2) in [ErikNovak/template-nodejs-elasticsearch-microservice](https://github.com//ErikNovak/template-nodejs-elasticsearch-microservice)
 2. 🎉 Merged PR [#17](https://github.com//ErikNovak/DTProc/pull/17) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
@@ -36,12 +39,16 @@ My collection of gists is available [here][gists].
 5. 💪 Opened PR [#16](https://github.com//ErikNovak/DTProc/pull/16) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
 <!--END_SECTION:activity-->
 
-*NOTE: Top languages does not indicate my skill level or something like that, it's a github metric of which languages I have the most code on github, it's a new feature of [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)*
+</details>
+
+<details>
+  <summary>:zap: <b>Github Statistics</b></summary>
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eriknovak&theme=buefy&layout=compact&card_width=444)](https://github.com/eriknovak)
 
-
 [![ErikNovak's github stats](https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=buefy&count_private=true)](https://github.com/eriknovak)
+
+</details>
 
 [job]: https://ailab.ijs.si/
 [gists]: https://gist.github.com/ErikNovak
