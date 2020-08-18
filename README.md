@@ -29,6 +29,12 @@ My collection of gists is available [here][gists].
 <br />
 
 <!--START_SECTION:activity-->
+1. 🎉 Merged PR [#2](https://github.com//ErikNovak/template-nodejs-elasticsearch-microservice/pull/2) in [ErikNovak/template-nodejs-elasticsearch-microservice](https://github.com//ErikNovak/template-nodejs-elasticsearch-microservice)
+2. 🎉 Merged PR [#17](https://github.com//ErikNovak/DTProc/pull/17) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
+3. 💪 Opened PR [#17](https://github.com//ErikNovak/DTProc/pull/17) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
+4. 🎉 Merged PR [#16](https://github.com//ErikNovak/DTProc/pull/16) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
+5. 💪 Opened PR [#16](https://github.com//ErikNovak/DTProc/pull/16) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
+<!--END_SECTION:activity-->
 
 *NOTE: Top languages does not indicate my skill level or something like that, it's a github metric of which languages I have the most code on github, it's a new feature of [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)*
 
