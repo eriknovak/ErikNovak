@@ -3,7 +3,7 @@
 I'm a researcher at the [Jožef Stefan Insitute][job] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. Cross-lingual language models, as well as (semi-)automatic text processing and visualization. I'm passionate in developing machine learning models and software that can be used for various tasks and in both scientific and business domains.
 
 
-#### Languages and Tools
+### ⌨️ Languages and Tools
 
 <img align="left" height="32" alt="Visual Studio Code" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1028px-Visual_Studio_Code_1.18_icon.svg.png" />    
 <img align="left" height="32" alt="TypeScript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" />  
@@ -21,10 +21,14 @@ I'm a researcher at the [Jožef Stefan Insitute][job] who is interested in all m
 <br />
 <br />
 
-#### Gists
+---
+
+### 🔖 Gists
 My collection of gists is available [here][gists].
 
 <br />
+
+<!--START_SECTION:activity-->
 
 *NOTE: Top languages does not indicate my skill level or something like that, it's a github metric of which languages I have the most code on github, it's a new feature of [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)*
 
