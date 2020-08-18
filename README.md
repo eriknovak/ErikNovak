@@ -44,8 +44,6 @@ My collection of gists is available [here][gists].
 <details>
   <summary>:zap: <b>Github Statistics</b></summary>
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eriknovak&theme=buefy&layout=compact&card_width=444)](https://github.com/eriknovak)
-
 [![ErikNovak's github stats](https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=buefy&count_private=true)](https://github.com/eriknovak)
 
 </details>
