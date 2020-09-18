@@ -13,8 +13,6 @@ I'm a researcher at the [Jožef Stefan Insitute][job] who is interested in all m
 <img align="left" height="32" alt="D3.js" src="https://camo.githubusercontent.com/722a5cc12c7d40231ebeb8ca6facdc8547e2abf7/68747470733a2f2f64336a732e6f72672f6c6f676f2e737667" />  
 <img align="left" height="32" alt="React" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />  
 <img align="left" height="32" alt="Python" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />  
-<img align="left" height="32" alt="Anaconda" src="https://avatars3.githubusercontent.com/u/22454001?s=200&v=4" />  
-<img align="left" height="32" alt="PyTorch" src="https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-dark.png" />  
 <img align="left" height="32" alt="Elastic" src="https://avatars0.githubusercontent.com/u/6764390?s=200&v=4" />  
 <img align="left" height="32" alt="Git" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
 
