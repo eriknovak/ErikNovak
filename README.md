@@ -31,11 +31,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#2](https://github.com//ErikNovak/template-nodejs-elasticsearch-microservice/pull/2) in [ErikNovak/template-nodejs-elasticsearch-microservice](https://github.com//ErikNovak/template-nodejs-elasticsearch-microservice)
-2. 🎉 Merged PR [#17](https://github.com//ErikNovak/DTProc/pull/17) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
-3. 💪 Opened PR [#17](https://github.com//ErikNovak/DTProc/pull/17) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
-4. 🎉 Merged PR [#16](https://github.com//ErikNovak/DTProc/pull/16) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
-5. 💪 Opened PR [#16](https://github.com//ErikNovak/DTProc/pull/16) in [ErikNovak/DTProc](https://github.com//ErikNovak/DTProc)
+1. ❗️ Opened issue [#161](https://github.com//X5GON/platform-api/issues/161) in [X5GON/platform-api](https://github.com//X5GON/platform-api)
+2. ❌ Closed PR [#114](https://github.com//X5GON/platform-api/pull/114) in [X5GON/platform-api](https://github.com//X5GON/platform-api)
+3. ❗️ Opened issue [#160](https://github.com//X5GON/platform-api/issues/160) in [X5GON/platform-api](https://github.com//X5GON/platform-api)
+4. ❗️ Closed issue [#23](https://github.com//X5GON/platform-api/issues/23) in [X5GON/platform-api](https://github.com//X5GON/platform-api)
+5. ❗️ Closed issue [#24](https://github.com//X5GON/platform-api/issues/24) in [X5GON/platform-api](https://github.com//X5GON/platform-api)
 <!--END_SECTION:activity-->
 
 </details>
