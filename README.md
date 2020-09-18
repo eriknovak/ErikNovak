@@ -19,7 +19,6 @@ I'm a researcher at the [Jožef Stefan Insitute][job] who is interested in all m
 </div>
 
 <br />
-<br />
 
 
 ### 🔖 Gists
