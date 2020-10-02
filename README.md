@@ -30,11 +30,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#3](https://github.com/X5GON/processing-pipeline-api/pull/3) in [X5GON/processing-pipeline-api](https://github.com/X5GON/processing-pipeline-api)
-2. ❗️ Opened issue [#161](https://github.com/X5GON/platform-api/issues/161) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-3. ❌ Closed PR [#114](https://github.com/X5GON/platform-api/pull/114) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-4. ❗️ Opened issue [#160](https://github.com/X5GON/platform-api/issues/160) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-5. ❗️ Closed issue [#23](https://github.com/X5GON/platform-api/issues/23) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+1. 🎉 Merged PR [#18](https://github.com/ErikNovak/DTProc/pull/18) in [ErikNovak/DTProc](https://github.com/ErikNovak/DTProc)
+2. 🎉 Merged PR [#3](https://github.com/X5GON/processing-pipeline-api/pull/3) in [X5GON/processing-pipeline-api](https://github.com/X5GON/processing-pipeline-api)
+3. ❗️ Opened issue [#161](https://github.com/X5GON/platform-api/issues/161) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+4. ❌ Closed PR [#114](https://github.com/X5GON/platform-api/pull/114) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+5. ❗️ Opened issue [#160](https://github.com/X5GON/platform-api/issues/160) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
 <!--END_SECTION:activity-->
 
 </details>
