@@ -1,7 +1,7 @@
 # VSCode Configurations
 
 ## Color Theme
-- **Dark:** [Night Owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
+- **Dark:** [Night Owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl) (no italics)
 - **Light:** [Github Plus](https://marketplace.visualstudio.com/items?itemName=thenikso.github-plus-theme)
 
 
