@@ -30,11 +30,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#651](https://github.com/qminer/qminer/pull/651) in [qminer/qminer](https://github.com/qminer/qminer)
-2. 🎉 Merged PR [#163](https://github.com/X5GON/platform-api/pull/163) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-3. 💪 Opened PR [#163](https://github.com/X5GON/platform-api/pull/163) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-4. 🎉 Merged PR [#162](https://github.com/X5GON/platform-api/pull/162) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-5. 💪 Opened PR [#162](https://github.com/X5GON/platform-api/pull/162) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+1. 💪 Opened PR [#652](https://github.com/qminer/qminer/pull/652) in [qminer/qminer](https://github.com/qminer/qminer)
+2. 💪 Opened PR [#651](https://github.com/qminer/qminer/pull/651) in [qminer/qminer](https://github.com/qminer/qminer)
+3. 🎉 Merged PR [#163](https://github.com/X5GON/platform-api/pull/163) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+4. 💪 Opened PR [#163](https://github.com/X5GON/platform-api/pull/163) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+5. 🎉 Merged PR [#162](https://github.com/X5GON/platform-api/pull/162) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
 <!--END_SECTION:activity-->
 
 </details>
