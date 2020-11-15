@@ -30,11 +30,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#653](https://github.com/qminer/qminer/pull/653) in [qminer/qminer](https://github.com/qminer/qminer)
-2. 💪 Opened PR [#653](https://github.com/qminer/qminer/pull/653) in [qminer/qminer](https://github.com/qminer/qminer)
-3. 🎉 Merged PR [#4](https://github.com/X5GON/search-api/pull/4) in [X5GON/search-api](https://github.com/X5GON/search-api)
-4. 🎉 Merged PR [#3](https://github.com/X5GON/search-api/pull/3) in [X5GON/search-api](https://github.com/X5GON/search-api)
-5. 🎉 Merged PR [#163](https://github.com/X5GON/platform-api/pull/163) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+1. ❗️ Opened issue [#6](https://github.com/Infominer-JSI/infominer-backend/issues/6) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+2. ❗️ Opened issue [#5](https://github.com/Infominer-JSI/infominer-backend/issues/5) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+3. ❗️ Opened issue [#4](https://github.com/Infominer-JSI/infominer-backend/issues/4) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+4. ❗️ Opened issue [#3](https://github.com/Infominer-JSI/infominer-backend/issues/3) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+5. ❗️ Opened issue [#2](https://github.com/Infominer-JSI/infominer-backend/issues/2) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
 <!--END_SECTION:activity-->
 
 </details>
