@@ -30,11 +30,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🗣 Commented on [#2](https://github.com/Infominer-JSI/infominer-backend/issues/2) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-2. 🎉 Merged PR [#166](https://github.com/X5GON/platform-api/pull/166) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-3. 💪 Opened PR [#166](https://github.com/X5GON/platform-api/pull/166) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-4. ❗️ Closed issue [#161](https://github.com/X5GON/platform-api/issues/161) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-5. 🎉 Merged PR [#165](https://github.com/X5GON/platform-api/pull/165) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+1. 💪 Opened PR [#7](https://github.com/Infominer-JSI/infominer-backend/pull/7) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+2. 🗣 Commented on [#2](https://github.com/Infominer-JSI/infominer-backend/issues/2) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+3. 🎉 Merged PR [#166](https://github.com/X5GON/platform-api/pull/166) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+4. 💪 Opened PR [#166](https://github.com/X5GON/platform-api/pull/166) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+5. ❗️ Closed issue [#161](https://github.com/X5GON/platform-api/issues/161) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
 <!--END_SECTION:activity-->
 
 </details>
