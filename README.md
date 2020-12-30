@@ -30,11 +30,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#19](https://github.com/ErikNovak/DTProc/pull/19) in [ErikNovak/DTProc](https://github.com/ErikNovak/DTProc)
-2. 🎉 Merged PR [#654](https://github.com/qminer/qminer/pull/654) in [qminer/qminer](https://github.com/qminer/qminer)
-3. 🎉 Merged PR [#8](https://github.com/Infominer-JSI/infominer-backend/pull/8) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-4. 💪 Opened PR [#8](https://github.com/Infominer-JSI/infominer-backend/pull/8) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-5. 🎉 Merged PR [#168](https://github.com/X5GON/platform-api/pull/168) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+1. 🎉 Merged PR [#20](https://github.com/ErikNovak/DTProc/pull/20) in [ErikNovak/DTProc](https://github.com/ErikNovak/DTProc)
+2. 🎉 Merged PR [#19](https://github.com/ErikNovak/DTProc/pull/19) in [ErikNovak/DTProc](https://github.com/ErikNovak/DTProc)
+3. 🎉 Merged PR [#654](https://github.com/qminer/qminer/pull/654) in [qminer/qminer](https://github.com/qminer/qminer)
+4. 🎉 Merged PR [#8](https://github.com/Infominer-JSI/infominer-backend/pull/8) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+5. 💪 Opened PR [#8](https://github.com/Infominer-JSI/infominer-backend/pull/8) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
 <!--END_SECTION:activity-->
 
 </details>
