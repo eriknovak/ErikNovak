@@ -30,11 +30,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#3](https://github.com/ErikNovak/ES-Search-JS/pull/3) in [ErikNovak/ES-Search-JS](https://github.com/ErikNovak/ES-Search-JS)
-2. 🎉 Merged PR [#20](https://github.com/ErikNovak/DTProc/pull/20) in [ErikNovak/DTProc](https://github.com/ErikNovak/DTProc)
-3. 🎉 Merged PR [#19](https://github.com/ErikNovak/DTProc/pull/19) in [ErikNovak/DTProc](https://github.com/ErikNovak/DTProc)
-4. 🎉 Merged PR [#654](https://github.com/qminer/qminer/pull/654) in [qminer/qminer](https://github.com/qminer/qminer)
-5. 🎉 Merged PR [#8](https://github.com/Infominer-JSI/infominer-backend/pull/8) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+1. 🎉 Merged PR [#37](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/37) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+2. 💪 Opened PR [#37](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/37) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+3. 🎉 Merged PR [#3](https://github.com/ErikNovak/ES-Search-JS/pull/3) in [ErikNovak/ES-Search-JS](https://github.com/ErikNovak/ES-Search-JS)
+4. 🎉 Merged PR [#20](https://github.com/ErikNovak/DTProc/pull/20) in [ErikNovak/DTProc](https://github.com/ErikNovak/DTProc)
+5. 🎉 Merged PR [#19](https://github.com/ErikNovak/DTProc/pull/19) in [ErikNovak/DTProc](https://github.com/ErikNovak/DTProc)
 <!--END_SECTION:activity-->
 
 </details>
