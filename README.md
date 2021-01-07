@@ -30,11 +30,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#9](https://github.com/Infominer-JSI/infominer-backend/pull/9) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-2. 💪 Opened PR [#9](https://github.com/Infominer-JSI/infominer-backend/pull/9) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-3. 🎉 Merged PR [#37](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/37) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-4. 💪 Opened PR [#37](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/37) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-5. 🎉 Merged PR [#3](https://github.com/ErikNovak/ES-Search-JS/pull/3) in [ErikNovak/ES-Search-JS](https://github.com/ErikNovak/ES-Search-JS)
+1. ❗️ Closed issue [#2](https://github.com/Infominer-JSI/infominer-backend/issues/2) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+2. 🎉 Merged PR [#9](https://github.com/Infominer-JSI/infominer-backend/pull/9) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+3. 💪 Opened PR [#9](https://github.com/Infominer-JSI/infominer-backend/pull/9) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+4. 🎉 Merged PR [#37](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/37) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+5. 💪 Opened PR [#37](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/37) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
 <!--END_SECTION:activity-->
 
 </details>
