@@ -30,11 +30,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. ❗️ Closed issue [#4](https://github.com/Infominer-JSI/infominer-backend/issues/4) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-2. 🗣 Commented on [#4](https://github.com/Infominer-JSI/infominer-backend/issues/4) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-3. 🎉 Merged PR [#14](https://github.com/Infominer-JSI/infominer-backend/pull/14) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-4. 💪 Opened PR [#14](https://github.com/Infominer-JSI/infominer-backend/pull/14) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-5. ❗️ Opened issue [#13](https://github.com/Infominer-JSI/infominer-backend/issues/13) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+1. 🗣 Commented on [#6](https://github.com/Infominer-JSI/infominer-backend/issues/6) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+2. 🎉 Merged PR [#16](https://github.com/Infominer-JSI/infominer-backend/pull/16) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+3. 💪 Opened PR [#16](https://github.com/Infominer-JSI/infominer-backend/pull/16) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+4. 🎉 Merged PR [#15](https://github.com/Infominer-JSI/infominer-backend/pull/15) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+5. 💪 Opened PR [#15](https://github.com/Infominer-JSI/infominer-backend/pull/15) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
 <!--END_SECTION:activity-->
 
 </details>
