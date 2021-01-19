@@ -1,6 +1,6 @@
 ### Hi, I'm Erik 👋🏼 
 
-I'm a researcher at the [Jožef Stefan Institute][job] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. Cross-lingual language models, as well as (semi-)automatic text processing and visualization. I'm passionate in developing machine learning models and software that can be used for various tasks and in both scientific and business domains.
+I'm a researcher at the [Jožef Stefan Institute][job] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. cross-lingual language models, as well as (semi-)automatic text processing and visualization. I'm passionate in developing machine learning models and software that can be used for various tasks and in both scientific and business domains.
 
 
 ### ⌨️ Languages and Tools
