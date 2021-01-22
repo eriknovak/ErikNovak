@@ -4,12 +4,11 @@ I'm a researcher at the [Jožef Stefan Institute][job] who is interested in all 
 
 For more information see my [homepage][homepage].
 
+### 🗃️ Data Set Lists
+My collection of data set lists can be found [here][datasets].
 
 ### 🔖 Gists
 My collection of gists is available [here][gists].
-
-### 🗃️ Data Set Lists
-My collection of data set lists can be found [here][datasets].
 
 <br />
 
