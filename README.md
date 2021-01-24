@@ -16,11 +16,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#1](https://github.com/Infominer-JSI/gui-client/pull/1) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-2. 💪 Opened PR [#1](https://github.com/Infominer-JSI/gui-client/pull/1) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-3. 🎉 Merged PR [#22](https://github.com/Infominer-JSI/infominer-backend/pull/22) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-4. 💪 Opened PR [#22](https://github.com/Infominer-JSI/infominer-backend/pull/22) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
-5. ❗️ Opened issue [#21](https://github.com/Infominer-JSI/infominer-backend/issues/21) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
+1. 🎉 Merged PR [#23](https://github.com/Infominer-JSI/infominer/pull/23) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
+2. 💪 Opened PR [#23](https://github.com/Infominer-JSI/infominer/pull/23) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
+3. 🎉 Merged PR [#1](https://github.com/Infominer-JSI/gui-client/pull/1) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+4. 💪 Opened PR [#1](https://github.com/Infominer-JSI/gui-client/pull/1) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+5. 🎉 Merged PR [#22](https://github.com/Infominer-JSI/infominer-backend/pull/22) in [Infominer-JSI/infominer-backend](https://github.com/Infominer-JSI/infominer-backend)
 <!--END_SECTION:activity-->
 
 </details>
