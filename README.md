@@ -16,11 +16,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#655](https://github.com/qminer/qminer/pull/655) in [qminer/qminer](https://github.com/qminer/qminer)
-2. 🎉 Merged PR [#171](https://github.com/X5GON/platform-api/pull/171) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-3. 🎉 Merged PR [#172](https://github.com/X5GON/platform-api/pull/172) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-4. 💪 Opened PR [#172](https://github.com/X5GON/platform-api/pull/172) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-5. 🎉 Merged PR [#169](https://github.com/X5GON/platform-api/pull/169) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+1. ❗️ Opened issue [#27](https://github.com/Infominer-JSI/infominer/issues/27) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
+2. ❗️ Opened issue [#26](https://github.com/Infominer-JSI/infominer/issues/26) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
+3. 🎉 Merged PR [#655](https://github.com/qminer/qminer/pull/655) in [qminer/qminer](https://github.com/qminer/qminer)
+4. 🎉 Merged PR [#171](https://github.com/X5GON/platform-api/pull/171) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+5. 🎉 Merged PR [#172](https://github.com/X5GON/platform-api/pull/172) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
 <!--END_SECTION:activity-->
 
 </details>
