@@ -16,11 +16,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. ❗️ Closed issue [#3](https://github.com/Infominer-JSI/gui-client/issues/3) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-2. 🗣 Commented on [#3](https://github.com/Infominer-JSI/gui-client/issues/3) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-3. 🎉 Merged PR [#6](https://github.com/Infominer-JSI/gui-client/pull/6) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-4. 💪 Opened PR [#6](https://github.com/Infominer-JSI/gui-client/pull/6) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-5. ❗️ Opened issue [#27](https://github.com/Infominer-JSI/infominer/issues/27) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
+1. ❗️ Opened issue [#7](https://github.com/Infominer-JSI/gui-client/issues/7) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+2. ❗️ Closed issue [#3](https://github.com/Infominer-JSI/gui-client/issues/3) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+3. 🗣 Commented on [#3](https://github.com/Infominer-JSI/gui-client/issues/3) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+4. 🎉 Merged PR [#6](https://github.com/Infominer-JSI/gui-client/pull/6) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+5. 💪 Opened PR [#6](https://github.com/Infominer-JSI/gui-client/pull/6) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
 <!--END_SECTION:activity-->
 
 </details>
