@@ -16,11 +16,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#5](https://github.com/X5GON/search-api/pull/5) in [X5GON/search-api](https://github.com/X5GON/search-api)
-2. 🎉 Merged PR [#6](https://github.com/X5GON/search-api/pull/6) in [X5GON/search-api](https://github.com/X5GON/search-api)
-3. 🗣 Commented on [#6](https://github.com/X5GON/search-api/issues/6) in [X5GON/search-api](https://github.com/X5GON/search-api)
-4. ❗️ Opened issue [#7](https://github.com/Infominer-JSI/gui-client/issues/7) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-5. ❗️ Closed issue [#3](https://github.com/Infominer-JSI/gui-client/issues/3) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+1. 🎉 Merged PR [#5](https://github.com/X5GON/processing-pipeline-api/pull/5) in [X5GON/processing-pipeline-api](https://github.com/X5GON/processing-pipeline-api)
+2. 🎉 Merged PR [#5](https://github.com/X5GON/search-api/pull/5) in [X5GON/search-api](https://github.com/X5GON/search-api)
+3. 🎉 Merged PR [#6](https://github.com/X5GON/search-api/pull/6) in [X5GON/search-api](https://github.com/X5GON/search-api)
+4. 🗣 Commented on [#6](https://github.com/X5GON/search-api/issues/6) in [X5GON/search-api](https://github.com/X5GON/search-api)
+5. ❗️ Opened issue [#7](https://github.com/Infominer-JSI/gui-client/issues/7) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
 <!--END_SECTION:activity-->
 
 </details>
