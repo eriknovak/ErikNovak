@@ -16,11 +16,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. ❌ Closed PR [#34](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/34) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-2. 🗣 Commented on [#34](https://github.com/JozefStefanInstitute/eLENS-miner-system/issues/34) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-3. 🎉 Merged PR [#38](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/38) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-4. 🎉 Merged PR [#40](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/40) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-5. 🎉 Merged PR [#41](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/41) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+1. 🎉 Merged PR [#7](https://github.com/X5GON/processing-pipeline-api/pull/7) in [X5GON/processing-pipeline-api](https://github.com/X5GON/processing-pipeline-api)
+2. 🎉 Merged PR [#173](https://github.com/X5GON/platform-api/pull/173) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+3. 🎉 Merged PR [#656](https://github.com/qminer/qminer/pull/656) in [qminer/qminer](https://github.com/qminer/qminer)
+4. ❌ Closed PR [#34](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/34) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+5. 🗣 Commented on [#34](https://github.com/JozefStefanInstitute/eLENS-miner-system/issues/34) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
 <!--END_SECTION:activity-->
 
 </details>
