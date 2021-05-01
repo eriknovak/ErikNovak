@@ -16,11 +16,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#6](https://github.com/X5GON/processing-pipeline-api/pull/6) in [X5GON/processing-pipeline-api](https://github.com/X5GON/processing-pipeline-api)
-2. 🎉 Merged PR [#7](https://github.com/X5GON/processing-pipeline-api/pull/7) in [X5GON/processing-pipeline-api](https://github.com/X5GON/processing-pipeline-api)
-3. 🎉 Merged PR [#173](https://github.com/X5GON/platform-api/pull/173) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
-4. 🎉 Merged PR [#656](https://github.com/qminer/qminer/pull/656) in [qminer/qminer](https://github.com/qminer/qminer)
-5. ❌ Closed PR [#34](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/34) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+1. 🎉 Merged PR [#45](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/45) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+2. 🎉 Merged PR [#44](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/44) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+3. 🎉 Merged PR [#42](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/42) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+4. 🎉 Merged PR [#2](https://github.com/ErikNovak/template-python-flask/pull/2) in [ErikNovak/template-python-flask](https://github.com/ErikNovak/template-python-flask)
+5. 🎉 Merged PR [#1](https://github.com/ErikNovak/event-registry-collector/pull/1) in [ErikNovak/event-registry-collector](https://github.com/ErikNovak/event-registry-collector)
 <!--END_SECTION:activity-->
 
 </details>
