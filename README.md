@@ -16,11 +16,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#45](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/45) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-2. 🎉 Merged PR [#44](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/44) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-3. 🎉 Merged PR [#42](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/42) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-4. 🎉 Merged PR [#2](https://github.com/ErikNovak/template-python-flask/pull/2) in [ErikNovak/template-python-flask](https://github.com/ErikNovak/template-python-flask)
-5. 🎉 Merged PR [#1](https://github.com/ErikNovak/event-registry-collector/pull/1) in [ErikNovak/event-registry-collector](https://github.com/ErikNovak/event-registry-collector)
+1. 🎉 Merged PR [#3](https://github.com/JozefStefanInstitute/StreamStory/pull/3) in [JozefStefanInstitute/StreamStory](https://github.com/JozefStefanInstitute/StreamStory)
+2. 🎉 Merged PR [#177](https://github.com/X5GON/platform-api/pull/177) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+3. 🎉 Merged PR [#176](https://github.com/X5GON/platform-api/pull/176) in [X5GON/platform-api](https://github.com/X5GON/platform-api)
+4. 🎉 Merged PR [#45](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/45) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+5. 🎉 Merged PR [#44](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/44) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
 <!--END_SECTION:activity-->
 
 </details>
