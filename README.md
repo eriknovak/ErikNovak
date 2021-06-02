@@ -16,11 +16,11 @@ My collection of gists is available [here][gists].
   <summary>:zap: <b>Recent Github Activity</b></summary>
   
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#49](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/49) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-2. 🎉 Merged PR [#48](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/48) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-3. 🎉 Merged PR [#46](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/46) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-4. 🎉 Merged PR [#43](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/43) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-5. 🎉 Merged PR [#47](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/47) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+1. 🎉 Merged PR [#54](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/54) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+2. 🎉 Merged PR [#53](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/53) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+3. 🎉 Merged PR [#52](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/52) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+4. 🎉 Merged PR [#51](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/51) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+5. 🎉 Merged PR [#50](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/50) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
 <!--END_SECTION:activity-->
 
 </details>
