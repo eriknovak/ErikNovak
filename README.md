@@ -57,11 +57,11 @@ My collection of gists is available [here][gists].
 ### 🖱️ Recent Github Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#8](https://github.com/Infominer-JSI/gui-client/pull/8) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-2. 💪 Opened PR [#8](https://github.com/Infominer-JSI/gui-client/pull/8) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-3. ❗️ Closed issue [#1](https://github.com/Infominer-JSI/infominer/issues/1) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
-4. 🎉 Merged PR [#54](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/54) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
-5. 🎉 Merged PR [#53](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/53) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
+1. ❗️ Opened issue [#9](https://github.com/Infominer-JSI/gui-client/issues/9) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+2. 🎉 Merged PR [#8](https://github.com/Infominer-JSI/gui-client/pull/8) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+3. 💪 Opened PR [#8](https://github.com/Infominer-JSI/gui-client/pull/8) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+4. ❗️ Closed issue [#1](https://github.com/Infominer-JSI/infominer/issues/1) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
+5. 🎉 Merged PR [#54](https://github.com/JozefStefanInstitute/eLENS-miner-system/pull/54) in [JozefStefanInstitute/eLENS-miner-system](https://github.com/JozefStefanInstitute/eLENS-miner-system)
 <!--END_SECTION:activity-->
 
 
