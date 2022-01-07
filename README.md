@@ -10,7 +10,7 @@ For more information see my [homepage][homepage].
   <img alt="Erik's Github Stats" src="https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=yeblu&hide_border=true" />
 </a>
 <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img alt="Erik's Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eriknovak&langs_count=8&layout=compact&theme=yeblu&hide_border=true" />
+  <img alt="Erik's Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eriknovak&langs_count=7&layout=compact&theme=yeblu&hide_border=true&card_width=280" />
 </a>
 
 ### 🧰 Languages and Tools
