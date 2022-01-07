@@ -1,6 +1,6 @@
 ### Hi, I'm Erik 👋🏼 
 
-I'm a researcher at the [Jožef Stefan Institute][job] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. cross-lingual language models, as well as (semi-)automatic text processing and visualization. I'm passionate in developing machine learning models and software that can be used for various tasks and in both scientific and business domains.
+I'm a researcher at the [Jožef Stefan Institute][job] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. cross-lingual language models, as well as (semi-)automatic text processing and visualization. I'm passionate in developing machine learning models and software that can be used for various tasks in both scientific and business domains.
 
 For more information see my [homepage][homepage].
 
@@ -33,24 +33,12 @@ For more information see my [homepage][homepage].
   
   <!-- Unit Tests -->
   <img src="https://www.vectorlogo.zone/logos/mochajs/mochajs-icon.svg" alt="mocha" width="40" height="40"/> 
-  <img src="https://www.vectorlogo.zone/logos/travis-ci/travis-ci-icon.svg" alt="travisci" width="40" height="40"/> 
 </p>
-
-
-
-### 🗃️ Data Set Lists
-My collection of data set lists can be found [here][datasets].
-
-
-
-### 🔖 Gists
-My collection of gists is available [here][gists].
-
 
 
 ### 📊 Github Statistics
 
-<img alt="codeSTACKr's Github Stats" src="https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=blue-green&hide_border=true" />
+<img alt="Erik's Github Stats" src="https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=blue-green&hide_border=true" />
 
 
 
