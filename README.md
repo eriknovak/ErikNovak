@@ -80,11 +80,11 @@ For more information see my [homepage][homepage].
 ### 🖱️ Recent Github Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#12](https://github.com/Infominer-JSI/gui-client/pull/12) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-2. ❗️ Closed issue [#5](https://github.com/Infominer-JSI/gui-client/issues/5) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-3. 💪 Opened PR [#12](https://github.com/Infominer-JSI/gui-client/pull/12) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
-4. ❗️ Opened issue [#28](https://github.com/Infominer-JSI/infominer/issues/28) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
-5. ❗️ Opened issue [#11](https://github.com/Infominer-JSI/gui-client/issues/11) in [Infominer-JSI/gui-client](https://github.com/Infominer-JSI/gui-client)
+1. 🎉 Merged PR [#668](https://github.com/qminer/qminer/pull/668) in [qminer/qminer](https://github.com/qminer/qminer)
+2. 💪 Opened PR [#668](https://github.com/qminer/qminer/pull/668) in [qminer/qminer](https://github.com/qminer/qminer)
+3. 🎉 Merged PR [#34](https://github.com/Infominer-JSI/infominer/pull/34) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
+4. ❗️ Closed issue [#33](https://github.com/Infominer-JSI/infominer/issues/33) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
+5. 💪 Opened PR [#34](https://github.com/Infominer-JSI/infominer/pull/34) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
 <!--END_SECTION:activity-->
 
 
