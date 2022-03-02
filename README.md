@@ -80,11 +80,11 @@ For more information see my [homepage][homepage].
 ### 🖱️ Recent Github Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#668](https://github.com/qminer/qminer/pull/668) in [qminer/qminer](https://github.com/qminer/qminer)
-2. 💪 Opened PR [#668](https://github.com/qminer/qminer/pull/668) in [qminer/qminer](https://github.com/qminer/qminer)
-3. 🎉 Merged PR [#34](https://github.com/Infominer-JSI/infominer/pull/34) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
-4. ❗️ Closed issue [#33](https://github.com/Infominer-JSI/infominer/issues/33) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
-5. 💪 Opened PR [#34](https://github.com/Infominer-JSI/infominer/pull/34) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
+1. ❗️ Opened issue [#14](https://github.com/Infominer-JSI/web-ui/issues/14) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+2. ❗️ Opened issue [#13](https://github.com/Infominer-JSI/web-ui/issues/13) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+3. 🎉 Merged PR [#668](https://github.com/qminer/qminer/pull/668) in [qminer/qminer](https://github.com/qminer/qminer)
+4. 💪 Opened PR [#668](https://github.com/qminer/qminer/pull/668) in [qminer/qminer](https://github.com/qminer/qminer)
+5. 🎉 Merged PR [#34](https://github.com/Infominer-JSI/infominer/pull/34) in [Infominer-JSI/infominer](https://github.com/Infominer-JSI/infominer)
 <!--END_SECTION:activity-->
 
 
