@@ -80,11 +80,11 @@ For more information see my [homepage][homepage].
 ### 🖱️ Recent Github Activity
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#4](https://github.com/Infominer-JSI/web-ui/pull/4) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
-2. 💪 Opened PR [#4](https://github.com/Infominer-JSI/web-ui/pull/4) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
-3. 🎉 Merged PR [#3](https://github.com/Infominer-JSI/web-ui/pull/3) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
-4. 💪 Opened PR [#3](https://github.com/Infominer-JSI/web-ui/pull/3) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
-5. 🎉 Merged PR [#2](https://github.com/Infominer-JSI/web-ui/pull/2) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+1. 🎉 Merged PR [#5](https://github.com/Infominer-JSI/web-ui/pull/5) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+2. 💪 Opened PR [#5](https://github.com/Infominer-JSI/web-ui/pull/5) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+3. 🎉 Merged PR [#4](https://github.com/Infominer-JSI/web-ui/pull/4) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+4. 💪 Opened PR [#4](https://github.com/Infominer-JSI/web-ui/pull/4) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+5. 🎉 Merged PR [#3](https://github.com/Infominer-JSI/web-ui/pull/3) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
 <!--END_SECTION:activity-->
 
 
