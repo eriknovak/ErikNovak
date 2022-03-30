@@ -80,11 +80,11 @@ For more information see my [homepage][homepage].
 ### 🖱️ Recent Github Activity
 
 <!--START_SECTION:activity-->
-1. ❗️ Opened issue [#11](https://github.com/Infominer-JSI/web-ui/issues/11) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
-2. ❗️ Opened issue [#10](https://github.com/Infominer-JSI/web-ui/issues/10) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
-3. ❗️ Opened issue [#9](https://github.com/Infominer-JSI/web-ui/issues/9) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
-4. ❗️ Opened issue [#8](https://github.com/Infominer-JSI/web-ui/issues/8) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
-5. ❗️ Opened issue [#7](https://github.com/Infominer-JSI/web-ui/issues/7) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+1. ❗️ Opened issue [#14](https://github.com/Infominer-JSI/web-ui/issues/14) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+2. ❗️ Opened issue [#13](https://github.com/Infominer-JSI/web-ui/issues/13) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+3. ❗️ Opened issue [#12](https://github.com/Infominer-JSI/web-ui/issues/12) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+4. ❗️ Opened issue [#11](https://github.com/Infominer-JSI/web-ui/issues/11) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+5. ❗️ Opened issue [#10](https://github.com/Infominer-JSI/web-ui/issues/10) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
 <!--END_SECTION:activity-->
 
 
