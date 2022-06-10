@@ -80,11 +80,11 @@ For more information see my [homepage][homepage].
 ### 🖱️ Recent Github Activity
 
 <!--START_SECTION:activity-->
-1. ❌ Closed PR [#7](https://github.com/JozefStefanInstitute/enviroLENS/pull/7) in [JozefStefanInstitute/enviroLENS](https://github.com/JozefStefanInstitute/enviroLENS)
-2. 🎉 Merged PR [#1](https://github.com/ErikNovak/template-python-flask/pull/1) in [ErikNovak/template-python-flask](https://github.com/ErikNovak/template-python-flask)
-3. 🎉 Merged PR [#3](https://github.com/ErikNovak/template-python-flask/pull/3) in [ErikNovak/template-python-flask](https://github.com/ErikNovak/template-python-flask)
-4. ❗️ Opened issue [#14](https://github.com/Infominer-JSI/web-ui/issues/14) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
-5. ❗️ Opened issue [#13](https://github.com/Infominer-JSI/web-ui/issues/13) in [Infominer-JSI/web-ui](https://github.com/Infominer-JSI/web-ui)
+1. 🎉 Merged PR [#4](https://github.com/eriknovak/RSDO-SLOmet-atomic-2020/pull/4) in [eriknovak/RSDO-SLOmet-atomic-2020](https://github.com/eriknovak/RSDO-SLOmet-atomic-2020)
+2. 💪 Opened PR [#4](https://github.com/eriknovak/RSDO-SLOmet-atomic-2020/pull/4) in [eriknovak/RSDO-SLOmet-atomic-2020](https://github.com/eriknovak/RSDO-SLOmet-atomic-2020)
+3. ❌ Closed PR [#7](https://github.com/JozefStefanInstitute/enviroLENS/pull/7) in [JozefStefanInstitute/enviroLENS](https://github.com/JozefStefanInstitute/enviroLENS)
+4. 🎉 Merged PR [#1](https://github.com/ErikNovak/template-python-flask/pull/1) in [ErikNovak/template-python-flask](https://github.com/ErikNovak/template-python-flask)
+5. 🎉 Merged PR [#3](https://github.com/ErikNovak/template-python-flask/pull/3) in [ErikNovak/template-python-flask](https://github.com/ErikNovak/template-python-flask)
 <!--END_SECTION:activity-->
 
 
