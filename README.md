@@ -1,17 +1,8 @@
 ### Hi, I'm Erik 👋🏼
 
-I'm a researcher at the [Jožef Stefan Institute][job] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. cross-lingual language models, as well as (semi-)automatic text processing and visualization. I'm passionate in developing machine learning models and software that can be used for various tasks in both scientific and business domains.
+I'm a researcher at the [Jožef Stefan Institute][jsi] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. cross-lingual language models, as well as (semi-)automatic text processing and visualization. I'm passionate in developing machine learning models and software that can be used for various tasks in both scientific and business domains.
 
 For more information see my [homepage][homepage].
-
-### 📊 Github Statistics
-
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img alt="Erik's Github Stats" src="https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=yeblu&hide_border=true" />
-</a>
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img alt="Erik's Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eriknovak&langs_count=7&layout=compact&theme=yeblu&hide_border=true&card_width=445" />
-</a>
 
 ### 🧰 Languages and Tools
 
@@ -42,22 +33,17 @@ For more information see my [homepage][homepage].
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="figma" width="40" height="40" />
 </p>
 
+### 📊 Github Statistics
 
-### 🖱️ Recent Github Activity
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img alt="Erik's Github Stats" src="https://github-readme-stats.vercel.app/api?username=eriknovak&show_icons=true&theme=yeblu&hide_border=true" />
+</a>
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img alt="Erik's Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eriknovak&langs_count=7&layout=compact&theme=yeblu&hide_border=true&card_width=445" />
+</a>
 
-<!--START_SECTION:activity-->
-1. 🎉 Merged PR [#4](https://github.com/eriknovak/RSDO-SLOmet-atomic-2020/pull/4) in [eriknovak/RSDO-SLOmet-atomic-2020](https://github.com/eriknovak/RSDO-SLOmet-atomic-2020)
-2. 💪 Opened PR [#4](https://github.com/eriknovak/RSDO-SLOmet-atomic-2020/pull/4) in [eriknovak/RSDO-SLOmet-atomic-2020](https://github.com/eriknovak/RSDO-SLOmet-atomic-2020)
-3. ❌ Closed PR [#7](https://github.com/JozefStefanInstitute/enviroLENS/pull/7) in [JozefStefanInstitute/enviroLENS](https://github.com/JozefStefanInstitute/enviroLENS)
-4. 🎉 Merged PR [#1](https://github.com/ErikNovak/template-python-flask/pull/1) in [ErikNovak/template-python-flask](https://github.com/ErikNovak/template-python-flask)
-5. 🎉 Merged PR [#3](https://github.com/ErikNovak/template-python-flask/pull/3) in [ErikNovak/template-python-flask](https://github.com/ErikNovak/template-python-flask)
-<!--END_SECTION:activity-->
-
-
-[job]: https://ailab.ijs.si/
+[jsi]: https://ailab.ijs.si/
 [homepage]: https://ailab.ijs.si/eriknovak/
-[gists]: https://gist.github.com/ErikNovak
-[datasets]: ./datasets/README.md
 
 
 
