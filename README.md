@@ -38,9 +38,6 @@ For more information see my [homepage][homepage].
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img alt="Erik's Github Stats" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=eriknovak&show_icons=true&theme=yeblu&hide_border=true" />
 </a>
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img alt="Erik's Github Stats" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=eriknovak&langs_count=7&layout=compact&theme=yeblu&hide_border=true&card_width=445" />
-</a>
 
 [jsi]: https://ailab.ijs.si/
 [homepage]: https://ailab.ijs.si/eriknovak/
