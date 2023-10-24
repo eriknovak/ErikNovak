@@ -33,12 +33,6 @@ For more information see my [homepage][homepage].
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="figma" width="40" height="40" />
 </p>
 
-### 📊 Github Statistics
-
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img alt="Erik's Github Stats" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=eriknovak&show_icons=true&theme=yeblu&hide_border=true" />
-</a>
-
 [jsi]: https://ailab.ijs.si/
 [homepage]: https://ailab.ijs.si/eriknovak/
 
