@@ -1,10 +1,10 @@
-### Hi, I'm Erik 👋🏼
+# Hi, I'm Erik 👋🏼👨🏻‍💻
 
-I'm a researcher at the [Jožef Stefan Institute][jsi] who is interested in all manner of Artificial Intelligence with a focus on Natural Language Processing, e.g. cross-lingual language models, as well as (semi-)automatic text processing and visualization. I'm passionate in developing machine learning models and software that can be used for various tasks in both scientific and business domains.
+I'm a researcher interested in 🤖 Artificial Intelligence focusing on 📝 Natural Language Processing (NLP). My work involves developing 🌍 (cross-lingual) language models, 🔄 (semi-)automatic text processing, 📊 visualization and their application. Furthermore, I am passionate about developing 💻 software that can be used for various tasks in both scientific and industry domains.
 
-For more information see my [homepage][homepage].
+For more information see my [Homepage].
 
-### 🧰 Languages and Tools
+## Languages and Tools
 
 <p>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" width="40" height="40"/>
@@ -33,8 +33,7 @@ For more information see my [homepage][homepage].
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="figma" width="40" height="40" />
 </p>
 
-[jsi]: https://ailab.ijs.si/
-[homepage]: https://ailab.ijs.si/eriknovak/
+[Homepage]: https://ailab.ijs.si/eriknovak/
 
 
 
