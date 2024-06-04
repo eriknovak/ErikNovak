@@ -6,7 +6,7 @@
 
 See my [Homepage] for more information.
 
-## Open Source Packages
+### Open Source Packages
 
 | **Name** | **Description** | **GitHub Stars** | **PyPi** |
 |----------|-----------------|------------------|---------|
@@ -14,7 +14,7 @@ See my [Homepage] for more information.
 | [datachart](https://github.com/eriknovak/datachart) | Data visualization package, simple to use, highly customizable. | ![Stars](https://img.shields.io/github/stars/eriknovak/datachart) | ![PyPi](https://img.shields.io/pypi/v/datachart?color=%2334D058) |
 
 
-## Data Sets
+### Data Sets
 
 | **Name** | **Description** | **GitHub Stars** | **Source** |
 |----------|-----------------|------------------|---------|
