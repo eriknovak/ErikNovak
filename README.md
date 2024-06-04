@@ -1,37 +1,26 @@
-# Hi, I'm Erik 👋🏼👨🏻‍💻
+# Hi, I'm Erik 👋🏼
 
-I'm a researcher interested in 🤖 Artificial Intelligence focusing on 📝 Natural Language Processing (NLP). My work involves developing 🌍 (cross-lingual) language models, 🔄 (semi-)automatic text processing, 📊 visualization and their application. Furthermore, I am passionate about developing 💻 software that can be used for various tasks in both scientific and industry domains.
+- **Position:** Researcher @ Department for Artificial Intelligence, Jožef Stefan Institute, Slovenia
+- **Focus:** 🤖 AI, 📝 NLP, 🌍 cross-lingual language models, 🔄 (semi-)automatic text processing, 📊 data visualization
+- **Connect:** [LinkedIn](https://www.linkedin.com/in/novakerik/)
 
-For more information see my [Homepage].
+See my [Homepage] for more information.
 
-## Languages and Tools
+## Open Source Packages
 
-<p>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" width="40" height="40"/>
-  <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="huggingface" width="40" height="40"/>
-  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg" alt="pandas" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="numpy" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" alt="storybook" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html5" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css3" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg" alt="d3js" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="express" width="40" height="40"/>
-  <img src="https://www.vectorlogo.zone/logos/mochajs/mochajs-icon.svg" alt="mocha" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="postgresql" width="40" height="40"/>
-  <img src="https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" alt="elasticsearch" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="redis" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="docker" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="40" height="40" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="figma" width="40" height="40" />
-</p>
+| **Name** | **Description** | **GitHub Stars** | **PyPi** |
+|----------|-----------------|------------------|---------|
+| [anonipy](https://github.com/eriknovak/anonipy) | Data anonymization package supporting different anonymization strategies. | ![Stars](https://img.shields.io/github/stars/eriknovak/anonipy) | ![PyPi](https://img.shields.io/pypi/v/anonipy?color=%2334D058)  |
+| [datachart](https://github.com/eriknovak/datachart) | Data visualization package, simple to use, highly customizable. | ![Stars](https://img.shields.io/github/stars/eriknovak/datachart) | ![PyPi](https://img.shields.io/pypi/v/datachart?color=%2334D058) |
+
+
+## Data Sets
+
+| **Name** | **Description** | **GitHub Stars** | **Source** |
+|----------|-----------------|------------------|---------|
+| [OG2021](https://github.com/E3-JSI/dataset-OG2021) | The 2021 Tokyo Olympics data set | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-OG2021) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1921)  |
+| [SloATOMIC 2020](https://github.com/E3-JSI/dataset-SloATOMIC-2020) | The Slovene translation of the ATOMIC 2020 data set | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-SloATOMIC-2020) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1724) |
+
 
 [Homepage]: https://ailab.ijs.si/eriknovak/
 
