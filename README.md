@@ -21,10 +21,29 @@ See my [Homepage] for more information.
 | [OG2021](https://github.com/E3-JSI/dataset-OG2021) | The 2021 Tokyo Olympics data set | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-OG2021) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1921)  |
 | [SloATOMIC 2020](https://github.com/E3-JSI/dataset-SloATOMIC-2020) | The Slovene translation of the ATOMIC 2020 data set | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-SloATOMIC-2020) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1724) |
 
+### Cookiecutter Templates
+
+**[eriknovak/cookiecutter-ml-dvc](https://github.com/eriknovak/cookiecutter-ml-dvc).** Designed for running machine learning experiments using [DVC] (still under development). To create the folder structure, run:
+
+```bash
+# install pipx for running cookiecutter
+pip install pipx
+# create a new project using the template
+pipx run cookiecutter gh:eriknovak/cookiecutter-ml-dvc
+```
+
+**[eriknovak/cookiecutter-ml-hpc](https://github.com/eriknovak/cookiecutter-ml-hpc).** Designed for running machine learning experiments on HPC [SLURM] systems (still under development). To create the folder structure, run:
+
+```bash
+# install pipx for running cookiecutter
+pip install pipx
+# create a new project using the template
+pipx run cookiecutter gh:eriknovak/cookiecutter-ml-hpc
+```
 
 [Homepage]: https://ailab.ijs.si/eriknovak/
-
-
+[DVC]: https://dvc.org/
+[SLURM]: https://www.schedmd.com/slurm/
 
 
 
