@@ -1,6 +1,6 @@
 # Hi, I'm Erik 👋🏼
 
-- **Position:** Researcher @ Department for Artificial Intelligence, Jožef Stefan Institute, Slovenia
+- **Position:** Data Scientist @ Event Registry
 - **Focus:** 🤖 AI, 📝 NLP, 🌍 cross-lingual language models, 🔄 (semi-)automatic text processing, 📊 data visualization
 - **Connect:** [LinkedIn](https://www.linkedin.com/in/novakerik/)
 
