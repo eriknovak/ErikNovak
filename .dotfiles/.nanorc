@@ -1,0 +1,61 @@
+# Nano Configuration for Better UX
+
+# Include all syntax highlighting
+include "/usr/share/nano/*.nanorc"
+
+# Show line numbers
+set linenumbers
+
+# Auto-indent new lines
+set autoindent
+
+# Convert tabs to spaces
+set tabstospaces
+set tabsize 4
+
+# Smooth scrolling
+set smooth
+
+# Show cursor position constantly
+set constantshow
+
+# Enable mouse support
+set mouse
+
+# Backup files before editing
+set backup
+set backupdir "~/.nano/backups"
+
+# Soft-wrap long lines at word boundaries
+set softwrap
+
+# Better search defaults
+set casesensitive
+set regexp
+
+# Display whitespace characters
+set whitespace "»·"
+
+# Match brackets
+set matchbrackets "(<[{)>]}"
+
+# Suspend with Ctrl+Z
+set suspendable
+
+# Key bindings for better UX
+bind ^S savefile main
+bind ^Q exit all
+bind ^F whereis main
+bind ^Z undo main
+bind ^Y redo main
+bind ^G gotoline main
+bind ^W writeout main
+
+# Color scheme
+set titlecolor brightwhite,blue
+set statuscolor brightwhite,green
+set errorcolor brightwhite,red
+set selectedcolor brightwhite,magenta
+set numbercolor cyan
+set keycolor cyan
+set functioncolor green

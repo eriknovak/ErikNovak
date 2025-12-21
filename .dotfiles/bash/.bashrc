@@ -1,6 +1,30 @@
 #!/bin/bash
 
 #============================
+# BASH HISTORY SETTINGS
+#============================
+
+# Large history size
+HISTSIZE=10000
+HISTFILESIZE=20000
+
+# Don't save duplicate commands
+HISTCONTROL=ignoredups:erasedups
+
+# Append to history, don't overwrite
+shopt -s histappend
+
+# Save multi-line commands as one
+shopt -s cmdhist
+
+# Save timestamp with commands
+HISTTIMEFORMAT="%F %T "
+
+# Save history after each command
+PROMPT_COMMAND="history -a"
+
+
+#============================
 # COLOR DEFINITIONS
 #============================
 
@@ -112,6 +136,25 @@ COLOR_GIT_UNTRACKED=$COLOR_BLUE
 #==============
 # PS1 CONFIG
 
+# Show active Python virtual environment (uv)
+show_python_env() {
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        echo -e "\e[38;5;208m($(basename $VIRTUAL_ENV))\e[0m "
+    fi
+}
+
+# Command execution timer
+timer_start() {
+    timer=${timer:-$SECONDS}
+}
+
+timer_stop() {
+    timer_show=$(($SECONDS - $timer))
+    unset timer
+}
+
+trap 'timer_start' DEBUG
+
 # git branch and status creator
 git_branch_and_status() {
     
@@ -178,16 +221,25 @@ git_branch_and_status() {
 }
 
 # user@host working-directory
-PS1='\[\e['$COLOR_USER_PS1'm\]\u@\h \[\e['$COLOR_DIR_PS1'm\]\w '
+PS1='\[\e['$COLOR_USER_PS1'm\]\u@\h '
+
+# python virtual environment
+PS1+='$(show_python_env)'
+
+# current directory
+PS1+='\[\e['$COLOR_DIR_PS1'm\]\w '
 
 # git branch and status info
 PS1+='$(git_branch_and_status)'
 
-# end-of-line
-PS1+='\n\[\e['$COLOR_ACTION_PS1'm\]'$'\xE2\x80\xBA'' \[\e[00m\]'
+# end-of-line with timer
+PS1+='\n\[\e[38;5;239m\]⏱ ${timer_show}s \[\e['$COLOR_ACTION_PS1'm\]'$'\xE2\x80\xBA'' \[\e[00m\]'
 
 # export PS1 
 export PS1
+
+# Update PROMPT_COMMAND to include timer
+PROMPT_COMMAND="timer_stop; history -a"
 
 
 #==============
@@ -205,3 +257,91 @@ export PS2='... '
 if [ -f $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
+
+
+#============================
+# USEFUL FUNCTIONS
+#============================
+
+# Create directory and cd into it
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
+# Quick git commit with message
+gcm() {
+    if [ -z "$1" ]; then
+        echo "Error: Commit message required"
+        return 1
+    fi
+    git add . && git commit -m "$1"
+}
+
+# Show git diff before committing
+gdc() {
+    git diff --cached
+}
+
+# Find and edit file with nano
+fe() {
+    local file
+    file=$(find . -type f -not -path '*/\.git/*' 2>/dev/null | fzf 2>/dev/null || find . -type f -not -path '*/\.git/*' 2>/dev/null | head -20)
+    if [ -n "$file" ]; then
+        nano "$file"
+    fi
+}
+
+# Show command history with optional search
+hist() {
+    if [ "$1" ]; then
+        history | grep "$1"
+    else
+        history | tail -20
+    fi
+}
+
+# Extract any archive type
+extract() {
+    if [ -f "$1" ]; then
+        case $1 in
+            *.tar.bz2)   tar xjf "$1"     ;;
+            *.tar.gz)    tar xzf "$1"     ;;
+            *.bz2)       bunzip2 "$1"     ;;
+            *.rar)       unrar e "$1"     ;;
+            *.gz)        gunzip "$1"      ;;
+            *.tar)       tar xf "$1"      ;;
+            *.tbz2)      tar xjf "$1"     ;;
+            *.tgz)       tar xzf "$1"     ;;
+            *.zip)       unzip "$1"       ;;
+            *.Z)         uncompress "$1"  ;;
+            *.7z)        7z x "$1"        ;;
+            *)           echo "'$1' cannot be extracted" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# Go up N directories
+up() {
+    local d=""
+    limit=$1
+    for ((i=1 ; i <= limit ; i++)); do
+        d=$d/..
+    done
+    d=$(echo $d | sed 's/^\///')
+    if [ -z "$d" ]; then
+        d=..
+    fi
+    cd $d
+}
+
+# Create a backup of a file
+backup() {
+    if [ -f "$1" ]; then
+        cp "$1" "$1.backup-$(date +%Y%m%d-%H%M%S)"
+        echo "Backup created: $1.backup-$(date +%Y%m%d-%H%M%S)"
+    else
+        echo "File not found: $1"
+    fi
+}

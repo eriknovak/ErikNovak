@@ -6,6 +6,17 @@
 
 See my [Homepage] for more information.
 
+## Dotfiles
+
+This repository also contains my personal development environment configurations (dotfiles) optimized for:
+- **Shell:** Bash with enhanced prompt (git status, Python venv, command timer)
+- **Terminal:** Tmux with activity monitoring and vi-style bindings
+- **Editor:** Nano with syntax highlighting and line numbers
+- **VCS:** Git with colorized output and useful aliases
+- **Python:** UV package manager integration
+
+See [CONFIG_UPDATES.md](CONFIG_UPDATES.md) for details and setup instructions.
+
 ### Open Source Packages
 
 | **Name** | **Description** | **GitHub Stars** | **PyPi** |
