@@ -13,15 +13,15 @@
     status = auto
 
 [color "status"]
-    added = green bold
-    changed = yellow bold
-    untracked = red bold
+    added = blue
+    changed = yellow
+    untracked = red
 
 [color "diff"]
     meta = yellow
     frag = magenta bold
     old = red bold
-    new = green bold
+    new = blue
 
 [alias]
     # Short status with branch info

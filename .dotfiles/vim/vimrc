@@ -18,6 +18,8 @@ set expandtab
 
 " color scheme setting
 syntax enable
-colorscheme dracula
+set termguicolors
+let g:catppuccin_flavour = 'mocha'
+colorscheme catppuccin_mocha
 
 filetype plugin indent on

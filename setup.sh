@@ -69,6 +69,15 @@ else
     echo -e "${GREEN}✓${NC} nvm already installed"
 fi
 
+# Install Catppuccin vim theme if not present
+if [ ! -d "$DOTFILES_DIR/.dotfiles/vim/bundle/catppuccin" ]; then
+    echo -e "${BLUE}Installing Catppuccin vim theme...${NC}"
+    git clone https://github.com/catppuccin/vim.git "$DOTFILES_DIR/.dotfiles/vim/bundle/catppuccin"
+    echo -e "${GREEN}✓${NC} Catppuccin vim theme installed"
+else
+    echo -e "${GREEN}✓${NC} Catppuccin vim theme already installed"
+fi
+
 # Create necessary directories
 mkdir -p "$HOME/.config"
 # Create nano backup directory
