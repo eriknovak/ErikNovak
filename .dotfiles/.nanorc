@@ -13,9 +13,6 @@ set autoindent
 set tabstospaces
 set tabsize 4
 
-# Smooth scrolling
-set smooth
-
 # Show cursor position constantly
 set constantshow
 
@@ -38,9 +35,6 @@ set whitespace "»·"
 
 # Match brackets
 set matchbrackets "(<[{)>]}"
-
-# Suspend with Ctrl+Z
-set suspend
 
 # Key bindings for better UX
 bind ^S savefile main
