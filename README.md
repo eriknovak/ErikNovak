@@ -8,14 +8,14 @@ See my [Homepage] for more information.
 
 ## Dotfiles
 
-This repository also contains my personal development environment configurations (dotfiles) optimized for:
-- **Shell:** Bash with enhanced prompt (git status, Python venv, command timer)
-- **Terminal:** Tmux with activity monitoring and vi-style bindings
-- **Editor:** Nano with syntax highlighting and line numbers
-- **VCS:** Git with colorized output and useful aliases
-- **Python:** UV package manager integration
+Personal development environment configurations. Run `./setup.sh` to install.
 
-See [CONFIG_UPDATES.md](CONFIG_UPDATES.md) for details and setup instructions.
+- **Shell:** Bash with [Starship](https://starship.rs/) prompt (Catppuccin Mocha theme)
+- **Terminal:** Tmux with Catppuccin theme, vim-style bindings, TPM plugins
+- **Editors:** Nano and Vim with syntax highlighting and custom themes
+- **VCS:** Git with colorized output and useful aliases (`lg`, `st`, `up`)
+- **Python:** UV package manager aliases
+- **Node.js:** nvm (Node Version Manager)
 
 ### Open Source Packages
 

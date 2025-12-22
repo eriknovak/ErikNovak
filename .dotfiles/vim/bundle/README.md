@@ -1,7 +1,9 @@
 # Download Bundle
 
-Download the [dracula-theme][dt] into this folder.
+Clone the [catppuccin-vim][cv] theme into this folder:
 
+```bash
+git clone https://github.com/catppuccin/vim.git catppuccin
+```
 
-
-[dt]: https://github.com/dracula/vim
+[cv]: https://github.com/catppuccin/vim
