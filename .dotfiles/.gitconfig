@@ -1,0 +1,73 @@
+[include]
+    path = ~/.gitconfig.local
+
+[core]
+    editor = nano
+    autocrlf = input
+
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "status"]
+    added = blue
+    changed = yellow
+    untracked = red
+
+[color "diff"]
+    meta = yellow
+    frag = magenta bold
+    old = red bold
+    new = blue
+
+[alias]
+    # Short status with branch info
+    st = status -sb
+    # Colorful log with graph
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    # Show last commit
+    last = log -1 HEAD --stat
+    # Unstage files
+    unstage = reset HEAD --
+    # Amend last commit
+    amend = commit --amend --no-edit
+    # Show branches with last commit
+    br = branch -v
+    # Show diff of staged changes
+    staged = diff --cached
+    # Quick commit
+    cm = commit -m
+    # Pull with rebase
+    up = pull --rebase --autostash
+    # Show contributors
+    contributors = shortlog -sn
+    # Show files in last commit
+    files = diff-tree --no-commit-id --name-only -r
+
+[diff]
+    # Better diff algorithm
+    algorithm = histogram
+    colorMoved = default
+
+[merge]
+    # Show common ancestor in conflicts
+    conflictstyle = diff3
+
+[pull]
+    rebase = false
+
+[init]
+    defaultBranch = main
+
+[help]
+    # Autocorrect typos after 1 second
+    autocorrect = 10
+
+[push]
+    default = simple
+    followTags = true
+[user]
+	email = novak.erik@gmail.com
+	name = Erik Novak
