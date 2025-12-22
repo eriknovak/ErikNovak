@@ -1,0 +1,25 @@
+" configure pathogen
+call pathogen#infect()
+
+set hidden
+
+" turn on line numbering
+set number
+
+set ts=2 sts=2 sw=2 expandtab
+
+" sane editing (tabs)
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" convert all typed tabs to spaces
+set expandtab
+
+" color scheme setting
+syntax enable
+set termguicolors
+let g:catppuccin_flavour = 'mocha'
+colorscheme catppuccin_mocha
+
+filetype plugin indent on
