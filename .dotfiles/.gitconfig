@@ -3,7 +3,6 @@
 
 [core]
     editor = nano
-    pager = less -FRX
     autocrlf = input
 
 [color]
@@ -69,6 +68,3 @@
 [push]
     default = simple
     followTags = true
-[user]
-	email = novak.erik@gmail.com
-	name = Erik Novak
