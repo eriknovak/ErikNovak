@@ -1,61 +1,70 @@
-# Hi, I'm Erik 👋🏼
+# Erik Novak
 
-- **Position:** Data Scientist @ Event Registry
-- **Focus:** 🤖 AI, 📝 NLP, 🌍 cross-lingual language models, 🔄 (semi-)automatic text processing, 📊 data visualization
-- **Connect:** [LinkedIn](https://www.linkedin.com/in/novakerik/)
+**Data Scientist** at Event Registry
 
-See my [Homepage] for more information.
+### Research Focus
+Artificial Intelligence • Natural Language Processing • Cross-lingual Language Models • Semi-Automatic Text Processing • Data Visualization
 
-## Dotfiles
+**Connect:** [LinkedIn](https://www.linkedin.com/in/novakerik/) | [Homepage]
 
-Personal development environment configurations. Run `./setup.sh` to install.
+## Development Environment
 
-- **Shell:** Bash with [Starship](https://starship.rs/) prompt (Catppuccin Mocha theme)
-- **Terminal:** Tmux with Catppuccin theme, vim-style bindings, TPM plugins
-- **Editors:** Nano and Vim with syntax highlighting and custom themes
-- **VCS:** Git with colorized output and useful aliases (`lg`, `st`, `up`)
-- **Python:** UV package manager aliases
-- **Node.js:** nvm (Node Version Manager)
-
-### Open Source Packages
-
-| **Name** | **Description** | **GitHub Stars** | **PyPi** |
-|----------|-----------------|------------------|---------|
-| [anonipy](https://github.com/eriknovak/anonipy) | Data anonymization package supporting different anonymization strategies. | ![Stars](https://img.shields.io/github/stars/eriknovak/anonipy) | ![PyPi](https://img.shields.io/pypi/v/anonipy?color=%2334D058)  |
-| [datachart](https://github.com/eriknovak/datachart) | Data visualization package, simple to use, highly customizable. | ![Stars](https://img.shields.io/github/stars/eriknovak/datachart) | ![PyPi](https://img.shields.io/pypi/v/datachart?color=%2334D058) |
-
-
-### Data Sets
-
-| **Name** | **Description** | **GitHub Stars** | **Source** |
-|----------|-----------------|------------------|---------|
-| [OG2021](https://github.com/E3-JSI/dataset-OG2021) | The 2021 Tokyo Olympics data set | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-OG2021) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1921)  |
-| [SloATOMIC 2020](https://github.com/E3-JSI/dataset-SloATOMIC-2020) | The Slovene translation of the ATOMIC 2020 data set | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-SloATOMIC-2020) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1724) |
-
-### Cookiecutter Templates
-
-**[eriknovak/cookiecutter-ml-dvc](https://github.com/eriknovak/cookiecutter-ml-dvc).** Designed for running machine learning experiments using [DVC] (still under development). To create the folder structure, run:
+This repository contains personal development environment configurations and dotfiles. To install, run:
 
 ```bash
-# install pipx for running cookiecutter
+./setup.sh
+```
+
+### Configuration Stack
+
+- **Shell:** Bash with [Starship](https://starship.rs/) prompt featuring Catppuccin Mocha theme
+- **Terminal Multiplexer:** Tmux with Catppuccin theme, vim-style key bindings, and TPM plugin management
+- **Text Editors:** Nano and Vim configured with syntax highlighting and custom themes
+- **Version Control:** Git with enhanced colorized output and productivity aliases (`lg`, `st`, `up`)
+- **Python Environment:** UV package manager with convenient aliases
+- **Node.js Runtime:** nvm (Node Version Manager) for version management
+
+## Open Source Contributions
+
+### Python Packages
+
+| **Package** | **Description** | **GitHub Stars** | **PyPI** |
+|-------------|-----------------|------------------|---------|
+| [anonipy](https://github.com/eriknovak/anonipy) | Data anonymization library supporting multiple anonymization strategies and techniques | ![Stars](https://img.shields.io/github/stars/eriknovak/anonipy) | ![PyPi](https://img.shields.io/pypi/v/anonipy?color=%2334D058)  |
+| [datachart](https://github.com/eriknovak/datachart) | Flexible data visualization library with simple API and extensive customization options | ![Stars](https://img.shields.io/github/stars/eriknovak/datachart) | ![PyPi](https://img.shields.io/pypi/v/datachart?color=%2334D058) |
+
+
+### Research Datasets
+
+| **Dataset** | **Description** | **GitHub Stars** | **Repository** |
+|-------------|-----------------|------------------|----------------|
+| [OG2021](https://github.com/E3-JSI/dataset-OG2021) | Comprehensive dataset from the 2021 Tokyo Olympics | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-OG2021) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1921)  |
+| [SloATOMIC 2020](https://github.com/E3-JSI/dataset-SloATOMIC-2020) | Slovene translation of the ATOMIC 2020 commonsense reasoning dataset | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-SloATOMIC-2020) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1724) |
+
+### Project Templates
+
+#### Machine Learning with DVC
+
+**[eriknovak/cookiecutter-ml-dvc](https://github.com/eriknovak/cookiecutter-ml-dvc)** — Template for machine learning experiments using [DVC] for version control and reproducibility (in development).
+
+```bash
+# Install pipx for running cookiecutter
 pip install pipx
-# create a new project using the template
+# Create a new project using the template
 pipx run cookiecutter gh:eriknovak/cookiecutter-ml-dvc
 ```
 
-**[eriknovak/cookiecutter-ml-hpc](https://github.com/eriknovak/cookiecutter-ml-hpc).** Designed for running machine learning experiments on HPC [SLURM] systems (still under development). To create the folder structure, run:
+#### Machine Learning on HPC Systems
+
+**[eriknovak/cookiecutter-ml-hpc](https://github.com/eriknovak/cookiecutter-ml-hpc)** — Template for machine learning experiments on HPC clusters with [SLURM] workload manager (in development).
 
 ```bash
-# install pipx for running cookiecutter
+# Install pipx for running cookiecutter
 pip install pipx
-# create a new project using the template
+# Create a new project using the template
 pipx run cookiecutter gh:eriknovak/cookiecutter-ml-hpc
 ```
 
 [Homepage]: https://ailab.ijs.si/eriknovak/
 [DVC]: https://dvc.org/
 [SLURM]: https://www.schedmd.com/slurm/
-
-
-
-
