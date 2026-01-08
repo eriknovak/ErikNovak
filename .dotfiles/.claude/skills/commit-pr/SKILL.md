@@ -1,6 +1,7 @@
 ---
 name: commit-pr
 description: Create a conventional commit, push to remote, and create a pull request. Use when the user wants to commit, push, and create a PR in one go, or says "commit and create PR" or "make a pull request".
+user-invocable: true
 allowed-tools:
   - Read
   - Bash(git:*)

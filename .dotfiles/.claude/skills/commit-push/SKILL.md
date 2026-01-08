@@ -1,6 +1,7 @@
 ---
 name: commit-push
 description: Create a conventional commit and push it to the remote repository. Use when the user wants to commit changes and immediately push them, or says "commit and push" or "push my changes".
+user-invocable: true
 allowed-tools:
   - Read
   - Bash(git:*)

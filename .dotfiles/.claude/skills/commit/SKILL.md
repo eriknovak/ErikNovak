@@ -1,6 +1,7 @@
 ---
 name: commit
 description: Create a git commit with a conventional commit message. Use when the user wants to commit changes, stage and commit, or needs help writing a commit message following conventional commits format (feat, fix, chore, docs, style, refactor, perf, test, build, ci).
+user-invocable: true
 allowed-tools:
   - Read
   - Bash(git:*)

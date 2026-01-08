@@ -1,6 +1,7 @@
 ---
 name: fix
 description: Interactive bug fixing workflow for Python and Node.js projects. Identifies issues, suggests fixes, and validates the fix works. Use when debugging errors or fixing specific bugs.
+user-invocable: true
 allowed-tools: Read, Edit, Write, Bash(python:*), Bash(pytest:*), Bash(npm:*), Bash(node:*), Bash(uv:*), Bash(mypy:*), Bash(tsc:*), Grep, Glob
 ---
 

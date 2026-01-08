@@ -1,6 +1,7 @@
 ---
 name: lint
 description: Intelligently detects project type (Node.js/React or Python) and runs appropriate linting tools. Use when checking code quality or validating project for style issues.
+user-invocable: true
 allowed-tools: Read, Bash(python:*), Bash(npm:*), Bash(pnpm:*), Bash(uv:*), Bash(ruff:*), Bash(eslint:*), Bash(flake8:*)
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: cleanup-branches
 description: Remove local git branches that no longer exist on the remote repository. Use when the user wants to clean up stale branches, remove deleted branches, or says "cleanup branches" or "prune branches".
+user-invocable: true
 allowed-tools:
   - Bash(git:*)
 ---
