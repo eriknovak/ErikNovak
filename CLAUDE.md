@@ -102,6 +102,16 @@ For tmux setup:
   - `muxn` - create new session
   - `muxl` - list sessions
 
+### Notification System
+Terminal notifications with bell and visual feedback:
+- `notify-done "message"` - Success notification
+- `notify-error "message"` - Error notification
+- `notify-action "message"` - Action required notification
+- `notify "title" "message"` - Generic notification
+- `run-notify command args` - Run command and notify on completion
+- `command && notify-me` - Notify when command finishes
+- Perfect for long-running tasks, builds, tests, model training
+
 ## Architecture Notes
 
 - All configuration files are symlinked from ~/.dotfiles/ to their expected locations
@@ -109,6 +119,35 @@ For tmux setup:
 - Modular design with separate directories for each tool
 - Uses external package managers: TPM for tmux, pathogen for vim, nvm for Node.js
 - Consistent theming with Catppuccin across tmux, vim, and starship
+
+## Claude Code Skills
+
+This repository includes custom skills for Claude Code to enhance development workflows:
+
+### `/fix` - Bug Fix Skill
+Interactive workflow for identifying, fixing, and validating bugs in Python and Node.js projects.
+
+**Features:**
+- Automatically detects project type (Python or Node.js)
+- Runs tests to identify failures (pytest, jest, npm test)
+- Checks for type errors (mypy, TypeScript)
+- Validates syntax and execution
+- Provides structured output for bug diagnosis
+
+**Usage:**
+- `/fix` - Run bug detection in current directory
+- `/fix path/to/project` - Run in specific directory
+
+**What it checks:**
+- **Python:** pytest tests, mypy type checking, syntax validation
+- **Node.js:** npm test, TypeScript compilation, syntax validation
+
+See `.claude/skills/fix/reference.md` for detailed documentation.
+
+### `/lint` - Code Quality Skill
+Intelligently detects project type and runs appropriate linting tools.
+
+**Supported languages:** Python (ruff, flake8, pylint), JavaScript/TypeScript (eslint)
 
 ## Dependencies
 

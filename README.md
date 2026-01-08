@@ -5,7 +5,7 @@
 ### Research Focus
 Artificial Intelligence • Natural Language Processing • Cross-lingual Language Models • Semi-Automatic Text Processing • Data Visualization
 
-**Connect:** [LinkedIn](https://www.linkedin.com/in/novakerik/) | [Homepage]
+**Connect:** [LinkedIn] | [Homepage]
 
 ## Development Environment
 
@@ -66,5 +66,6 @@ pipx run cookiecutter gh:eriknovak/cookiecutter-ml-hpc
 ```
 
 [Homepage]: https://ailab.ijs.si/eriknovak/
+[LinkedIn]: https://www.linkedin.com/in/novakerik/
 [DVC]: https://dvc.org/
 [SLURM]: https://www.schedmd.com/slurm/

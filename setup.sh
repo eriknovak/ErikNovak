@@ -30,6 +30,11 @@ declare -A FILES=(
     [".dotfiles/tmux/.tmux.conf"]="$HOME/.tmux.conf"
     [".dotfiles/vim/vimrc"]="$HOME/.vimrc"
     [".dotfiles/starship/starship.toml"]="$HOME/.config/starship.toml"
+    [".dotfiles/.claude/CLAUDE.md"]="$HOME/.claude/CLAUDE.md"
+    [".dotfiles/.claude/README.md"]="$HOME/.claude/README.md"
+    [".dotfiles/.claude/settings.json"]="$HOME/.claude/settings.json"
+    [".dotfiles/.claude/rules"]="$HOME/.claude/rules"
+    [".dotfiles/.claude/skills"]="$HOME/.claude/skills"
 )
 
 # Check for tmux installation
@@ -138,6 +143,32 @@ else
     echo -e "${GREEN}✓${NC} lazygit already installed"
 fi
 
+# Install Claude Code (AI coding assistant)
+if ! command -v claude-code &> /dev/null && ! command -v claude &> /dev/null; then
+    echo -e "${BLUE}Installing Claude Code...${NC}"
+
+    # Detect platform
+    case "$(uname -s)" in
+        Linux*)     PLATFORM=Linux;;
+        Darwin*)    PLATFORM=Mac;;
+        CYGWIN*|MINGW*|MSYS*) PLATFORM=Windows;;
+        *)          PLATFORM=Unknown;;
+    esac
+
+    if [ "$PLATFORM" = "Windows" ]; then
+        echo -e "${YELLOW}⚠${NC}  Windows detected. Please run the following in PowerShell:"
+        echo -e "  ${BLUE}irm https://claude.ai/install.ps1 | iex${NC}"
+        echo -e "  Then run 'claude auth' to authenticate with your API key"
+    else
+        # Unix/Mac: Use official curl installer (installs standalone binary)
+        curl -fsSL https://claude.ai/install.sh | bash
+        echo -e "${GREEN}✓${NC} Claude Code installed"
+        echo -e "${YELLOW}Note:${NC} Run 'claude auth' to authenticate with your API key"
+    fi
+else
+    echo -e "${GREEN}✓${NC} Claude Code already installed"
+fi
+
 # Install Catppuccin vim theme if not present
 if [ ! -d "$DOTFILES_DIR/.dotfiles/vim/bundle/catppuccin" ]; then
     echo -e "${BLUE}Installing Catppuccin vim theme...${NC}"
@@ -153,6 +184,10 @@ mkdir -p "$HOME/.config"
 # Create nano backup directory
 mkdir -p "$HOME/.nano/backups"
 echo -e "${GREEN}✓${NC} Created nano backup directory"
+
+# Create Claude Code directory
+mkdir -p "$HOME/.claude"
+echo -e "${GREEN}✓${NC} Created ~/.claude directory"
 
 # Function to create symlink
 create_symlink() {
@@ -185,16 +220,63 @@ configure_git_user() {
         return
     fi
 
+    # Prompt for name
     read -p "Enter your Git name: " git_name
-    read -p "Enter your Git email: " git_email
 
+    # Prompt for email with validation
+    while true; do
+        read -p "Enter your Git email: " git_email
+        if [[ "$git_email" =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ]]; then
+            break
+        else
+            echo -e "${YELLOW}⚠${NC}  Invalid email format. Please try again."
+        fi
+    done
+
+    # Prompt for credential helper
+    echo -e "\n${BLUE}Select credential helper:${NC}"
+    echo "  1) cache - Cache credentials in memory (default, 15 min timeout)"
+    echo "  2) store - Store credentials in plain text file (~/.git-credentials)"
+    echo "  3) none - Don't configure credential helper"
+    read -p "Enter choice [1-3] (default: 1): " cred_choice
+    cred_choice=${cred_choice:-1}
+
+    # Build config file
     cat > "$HOME/.gitconfig.local" << EOF
 [user]
     name = $git_name
     email = $git_email
-[credential]
-    helper = 'cache'
 EOF
+
+    # Add credential helper based on choice
+    case $cred_choice in
+        1)
+            cat >> "$HOME/.gitconfig.local" << EOF
+[credential]
+    helper = cache
+EOF
+            echo -e "${GREEN}✓${NC} Configured credential helper: cache"
+            ;;
+        2)
+            cat >> "$HOME/.gitconfig.local" << EOF
+[credential]
+    helper = store
+EOF
+            echo -e "${GREEN}✓${NC} Configured credential helper: store"
+            echo -e "${YELLOW}⚠${NC}  Warning: Credentials will be stored in plain text at ~/.git-credentials"
+            ;;
+        3)
+            echo -e "${BLUE}ℹ${NC}  Skipped credential helper configuration"
+            ;;
+        *)
+            cat >> "$HOME/.gitconfig.local" << EOF
+[credential]
+    helper = cache
+EOF
+            echo -e "${YELLOW}⚠${NC}  Invalid choice, defaulting to cache"
+            ;;
+    esac
+
     echo -e "${GREEN}✓${NC} Created ~/.gitconfig.local"
 }
 

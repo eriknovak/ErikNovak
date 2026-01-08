@@ -122,6 +122,97 @@ alias path='echo $PATH | tr ":" "\n"'
 
 
 #============================
+# LINTING ALIAS
+#============================
+
+# Smart lint command that detects project type
+lint() {
+    # Check for Node.js/React project
+    if [ -f "package.json" ]; then
+        echo "📦 Node.js project detected"
+
+        # Check if npm run lint exists
+        if grep -q '"lint"' package.json 2>/dev/null; then
+            echo "Running: npm run lint"
+            npm run lint
+        elif command -v eslint &> /dev/null; then
+            echo "Running: eslint ."
+            eslint .
+        else
+            echo "❌ No linting configured. Install ESLint with:"
+            echo "   npm install --save-dev eslint"
+            echo "   npx eslint --init"
+            return 1
+        fi
+
+    # Check for Python project
+    elif [ -f "pyproject.toml" ] || [ -f "setup.py" ] || [ -f "requirements.txt" ] || ls *.py &>/dev/null; then
+        echo "🐍 Python project detected"
+
+        # Try ruff first (modern and fast)
+        if command -v ruff &> /dev/null; then
+            echo "Running: ruff check ."
+            ruff check .
+        # Fall back to flake8
+        elif command -v flake8 &> /dev/null; then
+            echo "Running: flake8 ."
+            flake8 .
+        else
+            echo "❌ No Python linter found. Install ruff with:"
+            echo "   uv pip install ruff"
+            echo "Or install flake8 with:"
+            echo "   uv pip install flake8"
+            return 1
+        fi
+
+    else
+        echo "❓ Could not detect project type (no package.json or Python files)"
+        return 1
+    fi
+}
+
+# Format command for Python (using ruff or black)
+fmt() {
+    if [ -f "pyproject.toml" ] || [ -f "setup.py" ] || [ -f "requirements.txt" ] || ls *.py &>/dev/null; then
+        echo "🐍 Python project detected"
+
+        # Try ruff format first
+        if command -v ruff &> /dev/null; then
+            echo "Running: ruff format ."
+            ruff format .
+        # Fall back to black
+        elif command -v black &> /dev/null; then
+            echo "Running: black ."
+            black .
+        else
+            echo "❌ No Python formatter found. Install ruff with:"
+            echo "   uv pip install ruff"
+            return 1
+        fi
+    elif [ -f "package.json" ]; then
+        echo "📦 Node.js project detected"
+
+        if grep -q '"format"' package.json 2>/dev/null; then
+            echo "Running: npm run format"
+            npm run format
+        elif command -v prettier &> /dev/null; then
+            echo "Running: prettier --write ."
+            prettier --write .
+        else
+            echo "❌ No formatter configured"
+            return 1
+        fi
+    else
+        echo "❓ Could not detect project type"
+        return 1
+    fi
+}
+
+# Alias for common linting tasks
+alias lintfix='lint --fix 2>/dev/null || ruff check --fix . 2>/dev/null'
+
+
+#============================
 # MODERN TOOLS ALIAS
 #============================
 
@@ -162,3 +253,57 @@ if command -v tmuxinator &> /dev/null; then
     alias muxn='tmuxinator new'
     alias muxl='tmuxinator list'
 fi
+
+
+#============================
+# NOTIFICATION FUNCTIONS
+#============================
+
+# Terminal notification with bell and visual feedback
+notify() {
+    local title="$1"
+    local message="$2"
+    echo -e "\a"  # Terminal bell
+    echo -e "\n🔔 $title: $message\n"
+}
+
+# Notify when task completes successfully
+notify-done() {
+    local message="${1:-Task completed}"
+    echo -e "\a"
+    echo -e "\n✓ Done: $message\n"
+}
+
+# Notify when error occurs
+notify-error() {
+    local message="${1:-An error occurred}"
+    echo -e "\a"
+    echo -e "\n✗ Error: $message\n"
+}
+
+# Notify when action required
+notify-action() {
+    local message="${1:-Action required}"
+    echo -e "\a"
+    echo -e "\n⚠ Action Required: $message\n"
+}
+
+# Run command and notify on completion (success or failure)
+run-notify() {
+    local start_time=$(date +%s)
+    local cmd="$*"
+
+    if "$@"; then
+        local end_time=$(date +%s)
+        local duration=$((end_time - start_time))
+        notify-done "Completed in ${duration}s: $cmd"
+        return 0
+    else
+        local exit_code=$?
+        notify-error "Failed (exit $exit_code): $cmd"
+        return $exit_code
+    fi
+}
+
+# Notify when long-running command finishes (use with &&)
+alias notify-me='notify-done "Command finished"'

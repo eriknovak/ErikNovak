@@ -1,0 +1,5 @@
+# Local settings (not shared)
+settings.local.json
+
+# User-specific memory (optional)
+CLAUDE.local.md
