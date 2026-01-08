@@ -33,6 +33,7 @@ declare -A FILES=(
     [".dotfiles/.claude/CLAUDE.md"]="$HOME/.claude/CLAUDE.md"
     [".dotfiles/.claude/README.md"]="$HOME/.claude/README.md"
     [".dotfiles/.claude/settings.json"]="$HOME/.claude/settings.json"
+    [".dotfiles/.claude/hooks"]="$HOME/.claude/hooks"
     [".dotfiles/.claude/rules"]="$HOME/.claude/rules"
     [".dotfiles/.claude/skills"]="$HOME/.claude/skills"
 )
@@ -74,42 +75,6 @@ else
     echo -e "${GREEN}✓${NC} nvm already installed"
 fi
 
-# Install fzf (fuzzy finder)
-if ! command -v fzf &> /dev/null; then
-    echo -e "${BLUE}Installing fzf...${NC}"
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-    echo -e "${GREEN}✓${NC} fzf installed"
-else
-    echo -e "${GREEN}✓${NC} fzf already installed"
-fi
-
-# Install zoxide (smart directory jumper)
-if ! command -v zoxide &> /dev/null; then
-    echo -e "${BLUE}Installing zoxide...${NC}"
-    curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
-    echo -e "${GREEN}✓${NC} zoxide installed"
-else
-    echo -e "${GREEN}✓${NC} zoxide already installed"
-fi
-
-# Install bat (cat with syntax highlighting)
-if ! command -v bat &> /dev/null; then
-    echo -e "${BLUE}Installing bat...${NC}"
-    if command -v apt &> /dev/null; then
-        # Debian/Ubuntu
-        sudo apt install -y bat
-        # Create symlink as Ubuntu installs it as batcat
-        mkdir -p ~/.local/bin
-        ln -sf /usr/bin/batcat ~/.local/bin/bat 2>/dev/null || true
-    else
-        echo -e "${YELLOW}⚠${NC}  Please install bat manually: https://github.com/sharkdp/bat"
-    fi
-    echo -e "${GREEN}✓${NC} bat installed"
-else
-    echo -e "${GREEN}✓${NC} bat already installed"
-fi
-
 # Install eza (modern ls replacement)
 if ! command -v eza &> /dev/null; then
     echo -e "${BLUE}Installing eza...${NC}"
@@ -125,22 +90,6 @@ if ! command -v eza &> /dev/null; then
     fi
 else
     echo -e "${GREEN}✓${NC} eza already installed"
-fi
-
-# Install lazygit (terminal UI for git)
-if ! command -v lazygit &> /dev/null; then
-    echo -e "${BLUE}Installing lazygit...${NC}"
-    if command -v apt &> /dev/null; then
-        LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep '"tag_name"' | sed -E 's/.*"v([^"]+)".*/\1/')
-        wget -q "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" -O /tmp/lazygit.tar.gz
-        sudo tar -xzf /tmp/lazygit.tar.gz -C /usr/local/bin lazygit
-        rm /tmp/lazygit.tar.gz
-        echo -e "${GREEN}✓${NC} lazygit installed"
-    else
-        echo -e "${YELLOW}⚠${NC}  Please install lazygit manually: https://github.com/jesseduffield/lazygit"
-    fi
-else
-    echo -e "${GREEN}✓${NC} lazygit already installed"
 fi
 
 # Install Claude Code (AI coding assistant)

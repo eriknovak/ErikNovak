@@ -216,19 +216,6 @@ alias lintfix='lint --fix 2>/dev/null || ruff check --fix . 2>/dev/null'
 # MODERN TOOLS ALIAS
 #============================
 
-# bat - better cat with syntax highlighting
-# Note: On Ubuntu/Debian, bat is installed as 'batcat'
-if command -v batcat &> /dev/null; then
-    alias bat='batcat'
-    alias cat='batcat --paging=never'
-    alias catt='batcat'  # use bat with paging
-    alias catp='batcat --plain'  # bat without decorations
-elif command -v bat &> /dev/null; then
-    alias cat='bat --paging=never'
-    alias catt='bat'  # use bat with paging
-    alias catp='bat --plain'  # bat without decorations
-fi
-
 # eza - better ls (overrides previous ls aliases)
 if command -v eza &> /dev/null; then
     alias ls='eza --group-directories-first --icons'
@@ -239,19 +226,6 @@ if command -v eza &> /dev/null; then
     alias lsize='eza -lh --sort=size --reverse --icons'
     alias tree='eza --tree --icons'
     alias ltree='eza --tree --level=2 --icons'
-fi
-
-# lazygit - terminal UI for git
-if command -v lazygit &> /dev/null; then
-    alias lg='lazygit'
-fi
-
-# tmuxinator - tmux session manager
-if command -v tmuxinator &> /dev/null; then
-    alias mux='tmuxinator'
-    alias muxs='tmuxinator start'
-    alias muxn='tmuxinator new'
-    alias muxl='tmuxinator list'
 fi
 
 

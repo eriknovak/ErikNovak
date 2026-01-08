@@ -11,7 +11,7 @@ This file contains global instructions and context that Claude Code will use acr
 
 ## General Preferences
 
-- Use modern terminal tools when available (bat, eza, zoxide, lazygit)
+- Use modern terminal tools when available (eza)
 - Follow Python best practices and PEP 8 style guidelines
 - Prefer uv for Python package management
 - Keep code simple and avoid over-engineering

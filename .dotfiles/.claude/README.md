@@ -10,6 +10,11 @@ This directory contains global configuration for Claude Code that applies across
 ~/.claude/
 ├── CLAUDE.md           # Global memory and instructions
 ├── README.md           # This file
+├── settings.json       # Claude Code settings and permissions
+├── hooks/              # Post-tool-use hooks
+│   ├── README.md
+│   ├── python-test-lint.sh
+│   └── js-test-lint.sh
 ├── rules/              # Modular rule files
 │   ├── python.md
 │   └── react-vite.md
@@ -30,6 +35,19 @@ The `CLAUDE.md` file contains global context and preferences that Claude Code wi
 - General coding preferences
 - Common patterns you use
 - Tools and workflows
+
+### Settings (settings.json)
+Configuration file for Claude Code that controls:
+- Permissions for automatic command execution
+- Enabled plugins (e.g., ralph-wiggum)
+- Post-tool-use hooks configuration
+
+### Hooks (hooks/)
+Automated scripts that run after Claude Code edits files:
+- `python-test-lint.sh` - Auto-test and lint Python files (pytest, ruff)
+- `js-test-lint.sh` - Auto-test and lint JS/TS/CSS files (npm test, eslint, prettier)
+- Non-blocking with smart terminal notifications
+- See `hooks/README.md` for detailed documentation
 
 ### Rules (rules/)
 Modular rule files for specific topics. These are automatically loaded and can be organized by category:

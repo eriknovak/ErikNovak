@@ -66,12 +66,6 @@ Verify installation:
 tmux -V
 ```
 
-### Optional: Ruby (for tmuxinator)
-
-```bash
-sudo apt install ruby
-```
-
 ---
 
 ## Detailed Installation
@@ -90,12 +84,8 @@ The script automatically installs the following if not present:
 - **TPM** (Tmux Plugin Manager) - Manages tmux plugins
 - **Starship** - Modern, fast shell prompt
 - **nvm** - Node Version Manager
-- **zoxide** - Smart directory jumper
-- **bat** - Syntax-highlighted file viewer
+- **Claude Code** - AI coding assistant with automatic testing/linting
 - **eza** - Modern ls replacement with icons
-- **delta** - Enhanced git diff viewer
-- **lazygit** - Terminal UI for git
-- **tmuxinator** - Tmux session manager (requires Ruby)
 - **Catppuccin vim theme** - Beautiful vim color scheme
 
 ### 3. Create Symlinks
@@ -152,15 +142,11 @@ tmux
 # Wait for plugins to install
 ```
 
-### 4. Optional: Configure zoxide
-
-Zoxide learns from your directory navigation. Just use it normally with `cd` (aliased to `z`):
+### 4. Authenticate Claude Code
 
 ```bash
-cd ~/projects
-cd ~/documents
-# Later, jump directly:
-cd proj  # Takes you to ~/projects
+# Follow the prompts to authenticate with your API key
+claude auth
 ```
 
 ---
@@ -183,8 +169,7 @@ cd proj  # Takes you to ~/projects
 
 | Command | Description |
 |---------|-------------|
-| `cd <dir>` | Smart jump to directory (zoxide) |
-| `cdi` | Interactive directory selection |
+| `cd <dir>` | Change directory |
 | `..` | Go up one directory |
 | `...` | Go up two directories |
 | `....` | Go up three directories |
@@ -202,14 +187,6 @@ cd proj  # Takes you to ~/projects
 | `lsize` | Sort by file size |
 | `tree` | Display directory tree |
 | `ltree` | Display tree (2 levels) |
-
-### File Viewing (bat-enhanced)
-
-| Command | Description |
-|---------|-------------|
-| `cat <file>` | View with syntax highlighting (no paging) |
-| `catt <file>` | View with syntax highlighting (with paging) |
-| `catp <file>` | View plain text (no decorations) |
 
 ### Git Commands
 
@@ -281,43 +258,9 @@ cd proj  # Takes you to ~/projects
 | `fd <name>` | Find directories by name |
 | `path` | Show PATH in readable format |
 
-### Modern Tool Commands
-
-| Command | Description |
-|---------|-------------|
-| `lg` | Launch lazygit |
-| `mux` | tmuxinator |
-| `muxs <session>` | Start tmuxinator session |
-| `muxn <session>` | Create new tmuxinator session |
-| `muxl` | List tmuxinator sessions |
-
-### FZF Integration (if fzf installed)
-
-| Command | Description |
-|---------|-------------|
-| `preview` | Preview files with bat |
-| `vf` | Open file in vim with fzf search |
-| `cdf` | Fuzzy find and cd into directory |
-
 ---
 
 ## Modern Tools Guide
-
-### bat - Enhanced File Viewer
-
-Replacement for `cat` with syntax highlighting and line numbers:
-
-```bash
-cat script.py          # View with highlighting (no paging)
-catt large_file.log    # View with paging
-catp config.json       # Plain text, no decorations
-```
-
-**Features:**
-- Automatic syntax highlighting
-- Git integration (shows modifications)
-- Line numbers
-- Catppuccin theme
 
 ### eza - Modern ls Replacement
 
@@ -338,81 +281,29 @@ lsize                  # Sort by file size
 - Color-coded file types
 - Smart directory grouping
 
-### zoxide - Smart Directory Navigation
+### Claude Code - AI Coding Assistant
 
-Learns your most-used directories and enables quick jumping:
-
-```bash
-# Normal usage (builds history)
-cd ~/projects/data-science
-cd ~/documents/reports
-
-# Later, jump with partial names
-cd data       # Jumps to ~/projects/data-science
-cd rep        # Jumps to ~/documents/reports
-
-# Interactive selection
-cdi           # Shows menu of frequent directories
-```
-
-**Features:**
-- Frecency algorithm (frequency + recency)
-- Partial matching
-- Interactive mode
-
-### delta - Git Diff Viewer
-
-Automatically used by git for better diffs:
+Powerful AI assistant integrated into your terminal:
 
 ```bash
-gd                    # Shows unstaged changes with delta
-gds                   # Shows staged changes with delta
-git diff main         # Any git diff uses delta
+claude                         # Start interactive session
+claude "write a python script" # One-off task
+claude auth                    # Authenticate
 ```
 
-**Features:**
-- Side-by-side view option
-- Syntax highlighting in diffs
-- Line numbers
-- Catppuccin Mocha theme
-- Better merge conflict visualization
+**Automatic Testing & Linting:**
 
-### lazygit - Terminal UI for Git
+Post-edit hooks automatically run after Claude Code edits files:
+- **Python files** - Runs pytest and ruff with auto-fixes
+- **JS/TS files** - Runs npm test, eslint, and prettier
+- **CSS/SCSS files** - Runs stylelint and prettier
 
-Interactive git interface:
+Terminal notifications alert you to:
+- Test failures
+- Unfixable lint errors
+- Successful checks (tests passed)
 
-```bash
-lg                    # Launch lazygit
-```
-
-**Features:**
-- Visual commit history
-- Interactive staging
-- Branch management
-- Merge conflict resolution
-- Quick commands
-
-### tmuxinator - Tmux Session Manager
-
-Manage complex tmux layouts:
-
-```bash
-muxn my-project       # Create new project layout
-muxs my-project       # Start project session
-muxl                  # List all projects
-```
-
-Create a project file at `~/.config/tmuxinator/my-project.yml`:
-
-```yaml
-name: my-project
-root: ~/projects/my-project
-
-windows:
-  - editor: vim
-  - server: npm run dev
-  - shell:
-```
+Hooks are non-blocking and exit silently on success.
 
 ---
 
@@ -471,15 +362,6 @@ tl                    # List all sessions
 
 ## Troubleshooting
 
-### bat shows as "batcat" on Ubuntu
-
-The setup script creates a symlink automatically. If it's missing:
-
-```bash
-mkdir -p ~/.local/bin
-ln -sf /usr/bin/batcat ~/.local/bin/bat
-```
-
 ### tmux plugins not loading
 
 1. Verify TPM is installed:
@@ -513,28 +395,6 @@ Add to `~/.bashrc` if needed:
 export TERM=xterm-256color
 ```
 
-### zoxide not working
-
-Make sure it's initialized:
-
-```bash
-source ~/.bashrc
-```
-
-Verify zoxide is in PATH:
-```bash
-which zoxide
-```
-
-### Git delta not showing
-
-Check git configuration:
-
-```bash
-git config --get core.pager
-# Should output: delta
-```
-
 ### Node.js/npm commands not found
 
 Install Node.js via nvm:
@@ -557,15 +417,7 @@ Edit `~/.gitconfig.local` to add user-specific settings:
 nano ~/.gitconfig.local
 ```
 
-### 2. Create Tmuxinator Projects
-
-Set up project-specific tmux layouts:
-
-```bash
-muxn data-analysis
-```
-
-### 3. Explore Vim Configuration
+### 2. Explore Vim Configuration
 
 The vim setup includes:
 - Catppuccin Mocha theme
@@ -574,13 +426,7 @@ The vim setup includes:
 
 Add plugins to `~/.dotfiles/vim/bundle/`
 
-### 4. Install Additional Tools
-
-- **fzf** - Fuzzy finder (enables preview, vf, cdf commands)
-  ```bash
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
-  ```
+### 3. Install Additional Tools
 
 - **ripgrep** - Fast text search
   ```bash
@@ -599,9 +445,6 @@ Edit `~/.dotfiles/starship/starship.toml` to customize your prompt.
 - [Starship Documentation](https://starship.rs/)
 - [Catppuccin Theme](https://github.com/catppuccin/catppuccin)
 - [eza Documentation](https://github.com/eza-community/eza)
-- [bat Documentation](https://github.com/sharkdp/bat)
-- [zoxide Documentation](https://github.com/ajeetdsouza/zoxide)
-- [lazygit Documentation](https://github.com/jesseduffield/lazygit)
 
 ---
 

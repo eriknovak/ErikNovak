@@ -1,5 +1,42 @@
 {
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(cat:*)",
+      "Bash(tree:*)",
+      "Bash(chmod:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Skill(cleanup-branches)",
+      "Skill(commit)",
+      "Skill(commit-pr)",
+      "Skill(commit-push)",
+      "Skill(fix)",
+      "Skill(lint)"
+    ]
+  },
   "enabledPlugins": {
     "ralph-wiggum@claude-code-plugins": true
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/python-test-lint.sh",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/js-test-lint.sh",
+            "timeout": 45
+          }
+        ]
+      }
+    ]
   }
 }

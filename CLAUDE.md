@@ -17,7 +17,7 @@ This is the main script that installs all configurations by creating symlinks fr
 - Checks for tmux installation and installs TPM (Tmux Plugin Manager)
 - Installs Starship prompt if not present
 - Installs nvm (Node Version Manager) if not present
-- Installs modern terminal tools (zoxide, bat, eza, lazygit, tmuxinator)
+- Installs modern terminal tools (eza)
 - Installs Catppuccin vim theme
 - Creates necessary directories (nano backups, ~/.config)
 - Creates symlinks for all configuration files
@@ -82,25 +82,11 @@ For tmux setup:
 - Enhanced `ls` variants with colors and directory grouping
 
 ### Modern Terminal Tools
-- **bat** - Syntax-highlighted file viewer (replaces `cat`)
-  - `cat` - bat without paging
-  - `catt` - bat with paging
-  - `catp` - bat without decorations
 - **eza** - Modern ls replacement with icons and git integration
   - `ls` - basic listing with icons
   - `l`, `ll`, `la` - various detailed listings
   - `tree` - tree view
   - `ltree` - tree view (2 levels)
-- **zoxide** - Smart directory jumper (learns from usage)
-  - `cd` - aliased to `z` (smart jump)
-  - `cdi` - interactive directory selection
-- **lazygit** - Terminal UI for git
-  - `lg` - launch lazygit
-- **tmuxinator** - Tmux session manager
-  - `mux` - tmuxinator command
-  - `muxs` - start session
-  - `muxn` - create new session
-  - `muxl` - list sessions
 
 ### Notification System
 Terminal notifications with bell and visual feedback:
@@ -120,11 +106,21 @@ Terminal notifications with bell and visual feedback:
 - Uses external package managers: TPM for tmux, pathogen for vim, nvm for Node.js
 - Consistent theming with Catppuccin across tmux, vim, and starship
 
-## Claude Code Skills
+## Claude Code Integration
+
+### Installation
+
+Claude Code is automatically installed by the setup script. After installation, authenticate with:
+
+```bash
+claude auth
+```
+
+### Custom Skills
 
 This repository includes custom skills for Claude Code to enhance development workflows:
 
-### `/fix` - Bug Fix Skill
+#### `/fix` - Bug Fix Skill
 Interactive workflow for identifying, fixing, and validating bugs in Python and Node.js projects.
 
 **Features:**
@@ -144,10 +140,38 @@ Interactive workflow for identifying, fixing, and validating bugs in Python and 
 
 See `.claude/skills/fix/reference.md` for detailed documentation.
 
-### `/lint` - Code Quality Skill
+#### `/lint` - Code Quality Skill
 Intelligently detects project type and runs appropriate linting tools.
 
 **Supported languages:** Python (ruff, flake8, pylint), JavaScript/TypeScript (eslint)
+
+### Automated Testing & Linting Hooks
+
+Post-edit hooks automatically test and lint code after Claude Code edits files:
+
+#### Python Hook (`~/.claude/hooks/python-test-lint.sh`)
+Runs automatically when `.py` files are edited:
+- **Testing:** Runs `pytest` on modified file
+- **Linting:** Runs `ruff check --fix` with auto-fixes
+- **Notifications:** Terminal alerts for test failures or lint errors
+
+#### JavaScript/TypeScript Hook (`~/.claude/hooks/js-test-lint.sh`)
+Runs automatically when `.js`, `.jsx`, `.ts`, `.tsx`, `.css`, or `.scss` files are edited:
+- **Testing:** Runs `npm test` on modified file (JS/TS only)
+- **Linting:**
+  - JS/TS: `eslint --fix` with auto-fixes
+  - CSS/SCSS: `stylelint --fix` with auto-fixes
+- **Formatting:** `prettier --write` for all file types
+- **Notifications:** Terminal alerts for test failures or lint errors
+
+**Hook Behavior:**
+- Non-blocking (won't prevent edits)
+- Silent when auto-fixes succeed
+- Notifies on test failures or unfixable lint errors
+- Uses the notification system from `.bash_aliases`
+
+**Hook Permissions:**
+The hooks are pre-approved in `.claude/settings.json` to run without prompts.
 
 ## Dependencies
 
@@ -160,10 +184,11 @@ External tools installed by setup.sh:
 - Starship prompt (via curl installer)
 - TPM (Tmux Plugin Manager)
 - nvm (Node Version Manager)
+- Claude Code (AI coding assistant)
 - Modern terminal tools:
-  - zoxide (smart directory jumper)
-  - bat (syntax-highlighted file viewer)
   - eza (modern ls replacement)
-  - lazygit (terminal UI for git)
-  - tmuxinator (requires Ruby, installed via gem)
 - Catppuccin vim theme
+
+Optional tools (recommended for hooks):
+- Python: `pytest`, `ruff` (for testing/linting)
+- JavaScript: `eslint`, `prettier`, `stylelint` (for linting/formatting)
