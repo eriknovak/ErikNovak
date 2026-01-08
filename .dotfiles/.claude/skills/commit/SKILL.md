@@ -37,29 +37,29 @@ This skill helps you create well-formatted git commits following the [Convention
 
 ## Breaking Changes
 
-- Add `!` after type/scope: `feat!: description` or `feat(api)!: description`
-- Or add footer: `BREAKING CHANGE: description of the breaking change`
+- Add ! after type/scope: feat!: description or feat(api)!: description
+- Or add footer: BREAKING CHANGE: description of the breaking change
 
 ## Workflow
 
-1. **Check current status**: Run `git status -sb` to see what files are modified
-2. **Review changes**: Run `git diff` for unstaged changes or `git diff --staged` for staged changes
+1. **Check current status**: Run git status -sb to see what files are modified
+2. **Review changes**: Run git diff for unstaged changes or git diff --staged for staged changes
 3. **Stage files if needed**: If files aren't staged, ask the user which files to stage or stage all relevant files
 4. **Analyze changes**: Read the diff to understand what changed
 5. **Determine commit type**: Based on the changes, select the appropriate type:
-   - New functionality → `feat:`
-   - Bug fixes → `fix:`
-   - Documentation → `docs:`
-   - Refactoring → `refactor:`
-   - Tests → `test:`
-   - Configuration/dotfiles updates → `chore:`
-   - Performance improvements → `perf:`
+   - New functionality → feat:
+   - Bug fixes → fix:
+   - Documentation → docs:
+   - Refactoring → refactor:
+   - Tests → test:
+   - Configuration/dotfiles updates → chore:
+   - Performance improvements → perf:
 6. **Determine scope** (optional): If changes are focused on a specific component, add scope in parentheses
 7. **Write description**: Clear, concise description in imperative mood (e.g., "add feature" not "added feature")
 8. **Add body if needed**: For complex changes, add a body explaining what and why (not how)
 9. **Add footers if needed**: For breaking changes or issue references
 10. **Show the commit message**: Present the proposed commit message to the user for review
-11. **Create commit**: Use `git commit` with the approved message
+11. **Create commit**: Use git commit with the approved message
 
 ## Examples
 
@@ -96,9 +96,10 @@ JSON:API specification. Clients will need to update their response parsing.
 
 - **Description format**: Use imperative mood, lowercase, no period at the end
 - **Character limits**: Keep the first line under 72 characters
-- **Scope**: Use lowercase, keep it short (e.g., `api`, `auth`, `ui`, `parser`)
+- **Scope**: Use lowercase, keep it short (e.g., api, auth, ui, parser)
 - **Body**: Wrap at 72 characters, separate from description with blank line
-- **User's git config**: Respect aliases from `~/.gitconfig` (e.g., `g` for git, `st` for status)
+- **User's git config**: Respect aliases from ~/.gitconfig (e.g., g for git, st for status)
+- **No attribution**: Do NOT include "Generated with Claude Code" or "Co-Authored-By" lines in commit messages
 
 ## Handling Edge Cases
 

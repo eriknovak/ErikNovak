@@ -15,20 +15,20 @@ This skill creates a commit following [Conventional Commits](https://www.convent
 
 ## Prerequisites
 
-- GitHub CLI (`gh`) must be installed and authenticated
+- GitHub CLI (gh) must be installed and authenticated
 - Repository must have a GitHub remote
 - User must have push access to the repository
 
 ## Workflow
 
 1. **Check repository state**:
-   - Run `git status -sb` to see current branch and changes
+   - Run git status -sb to see current branch and changes
    - Verify we're not on main/master branch (don't create PR from main)
    - Check if remote exists and is a GitHub repository
 
 2. **Review changes**:
-   - Run `git diff` or `git diff --staged` to see what will be committed
-   - Check `git log origin/main..HEAD` to see existing commits on the branch
+   - Run git diff or git diff --staged to see what will be committed
+   - Check git log origin/main..HEAD to see existing commits on the branch
 
 3. **Stage files if needed**: If no files are staged, ask which files to stage
 
@@ -36,11 +36,11 @@ This skill creates a commit following [Conventional Commits](https://www.convent
    - Analyze changes to determine type (feat, fix, chore, etc.)
    - Write conventional commit message
    - Show proposed message for approval
-   - Create commit using `git commit`
+   - Create commit using git commit
 
 5. **Push to remote**:
    - Check if branch tracks a remote
-   - Use `git push` or `git push -u origin <branch>` for new branches
+   - Use git push or git push -u origin <branch> for new branches
    - Verify push succeeded
 
 6. **Create pull request**:
@@ -50,7 +50,7 @@ This skill creates a commit following [Conventional Commits](https://www.convent
      - Summary of changes
      - List of commits if multiple
      - Any relevant context
-   - Use `gh pr create --title "..." --body "..."`
+   - Use gh pr create --title "..." --body "..."
    - Optionally add labels, reviewers, etc.
 
 7. **Show result**: Display the PR URL and confirm success
@@ -67,7 +67,7 @@ Follow Conventional Commits specification:
 [optional footer(s)]
 ```
 
-**Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`
+**Types**: feat, fix, docs, style, refactor, perf, test, build, ci, chore
 
 ## Pull Request Format
 
@@ -139,12 +139,13 @@ feat"
 ## Important Notes
 
 - **Branch check**: Never create PR from main/master branch
-- **GitHub CLI**: Verify `gh` is installed with `gh --version`
-- **Authentication**: Check `gh auth status` if PR creation fails
+- **GitHub CLI**: Verify gh is installed with gh --version
+- **Authentication**: Check gh auth status if PR creation fails
 - **Base branch**: Default to main, but check the repository's default branch
-- **Draft PRs**: Can add `--draft` flag if changes aren't ready for review
-- **Labels**: Can add `--label` flag if repository uses labels
-- **Reviewers**: Can add `--reviewer` flag to request reviews
+- **Draft PRs**: Can add --draft flag if changes aren't ready for review
+- **Labels**: Can add --label flag if repository uses labels
+- **Reviewers**: Can add --reviewer flag to request reviews
+- **No attribution**: Do NOT include "Generated with Claude Code" or "Co-Authored-By" lines in commit messages
 
 ## Error Handling
 
@@ -152,16 +153,16 @@ feat"
 - **On main branch**: Warn user and suggest creating a feature branch first
 - **No commits**: If branch has no new commits vs main, inform user nothing to PR
 - **gh not installed**: Provide installation instructions
-- **Not authenticated**: Run `gh auth login` to authenticate
+- **Not authenticated**: Run gh auth login to authenticate
 - **Push fails**: Fix push issues before attempting PR creation
 - **PR already exists**: If PR exists for branch, show existing PR URL
 
 ## Advanced Options
 
-Can extend the `gh pr create` command with:
-- `--draft`: Create draft PR
-- `--label <label>`: Add labels
-- `--reviewer <username>`: Request reviews
-- `--assignee <username>`: Assign PR
-- `--milestone <name>`: Add to milestone
-- `--base <branch>`: Specify base branch (if not main)
+Can extend the gh pr create command with:
+- --draft: Create draft PR
+- --label <label>: Add labels
+- --reviewer <username>: Request reviews
+- --assignee <username>: Assign PR
+- --milestone <name>: Add to milestone
+- --base <branch>: Specify base branch (if not main)
