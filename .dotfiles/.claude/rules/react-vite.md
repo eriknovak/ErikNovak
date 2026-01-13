@@ -228,7 +228,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`${styles.button} ${styles[variant]}`}
+      className={`${styles.button} ${styles[`button--${variant}`]}`}
       onClick={onClick}
       disabled={disabled}
     >
@@ -239,6 +239,18 @@ export const Button: React.FC<ButtonProps> = ({
 ```
 
 ### CSS Modules
+
+Use **BEM (Block Element Modifier)** naming convention:
+- **Block**: Component name (`.button`, `.card`, `.nav`)
+- **Element**: Child part using `__` (`.button__icon`, `.card__title`)
+- **Modifier**: Variant/state using `--` (`.button--primary`, `.card--highlighted`)
+
+Examples:
+- `.button--primary` not `.buttonPrimary` or `.button-primary`
+- `.nav__item` not `.navItem`
+- `.form__input--error` for error state on form input
+
+Access in JS: `styles['button--primary']` or `styles.buttonPrimary` (CSS Modules auto-converts)
 
 ```css
 /* src/components/Button/style.module.css */
@@ -251,21 +263,21 @@ export const Button: React.FC<ButtonProps> = ({
   transition: all 0.2s ease;
 }
 
-.primary {
+.button--primary {
   background-color: #007bff;
   color: white;
 }
 
-.primary:hover {
+.button--primary:hover {
   background-color: #0056b3;
 }
 
-.secondary {
+.button--secondary {
   background-color: #6c757d;
   color: white;
 }
 
-.secondary:hover {
+.button--secondary:hover {
   background-color: #545b62;
 }
 
@@ -773,7 +785,7 @@ import styles from './style.module.css';
 - **Hooks**: camelCase with `use` prefix (`useFetch`, `useAuth`)
 - **API functions**: camelCase (`getProducts`, `createUser`)
 - **Types/Interfaces**: PascalCase (`Product`, `User`)
-- **CSS classes**: camelCase in modules (`styles.container`)
+- **CSS classes**: BEM convention (`.block__element--modifier`, e.g., `.card__title--highlighted`)
 - **Files**: Match component name (`Button/index.tsx`)
 
 ### Performance Tips
