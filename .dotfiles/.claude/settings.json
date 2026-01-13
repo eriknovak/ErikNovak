@@ -34,7 +34,8 @@
       "Skill(commit-pr)",
       "Skill(commit-push)",
       "Skill(fix)",
-      "Skill(lint)"
+      "Skill(lint)",
+      "Skill(proofread)"
     ]
   },
   "enabledPlugins": {
