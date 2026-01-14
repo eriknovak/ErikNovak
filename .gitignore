@@ -1,3 +1,12 @@
 .dotfiles/vim/bundle/catppuccin
 *.local
 *.local.*
+
+# Secrets and credentials
+.env
+.env.*
+credentials.json
+secrets.json
+secrets.yaml
+*.pem
+*.key

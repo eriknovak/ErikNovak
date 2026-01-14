@@ -35,25 +35,38 @@
       "Skill(commit-push)",
       "Skill(fix)",
       "Skill(lint)",
-      "Skill(proofread)"
+      "Skill(proofread)",
+      "Skill(secrets)"
     ]
   },
   "enabledPlugins": {
     "ralph-wiggum@claude-code-plugins": true
   },
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/erikn/.claude/hooks/block-secrets.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/python-test-lint.sh",
+            "command": "/home/erikn/.claude/hooks/python-test-lint.sh",
             "timeout": 30
           },
           {
             "type": "command",
-            "command": "~/.claude/hooks/js-test-lint.sh",
+            "command": "/home/erikn/.claude/hooks/js-test-lint.sh",
             "timeout": 45
           }
         ]

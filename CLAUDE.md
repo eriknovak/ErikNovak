@@ -145,6 +145,27 @@ Intelligently detects project type and runs appropriate linting tools.
 
 **Supported languages:** Python (ruff, flake8, pylint), JavaScript/TypeScript (eslint)
 
+#### `/secrets` - Secrets Audit Skill
+Audits codebase for proper secret handling and identifies potential security issues.
+
+**What it checks:**
+- Committed `.env` files and other secret files in git
+- Missing `.gitignore` patterns for sensitive files
+- Missing `.env.example` templates
+- Hardcoded secrets in source code (AWS keys, GitHub tokens, Stripe keys, passwords)
+- Private key content embedded in source files
+
+**Usage:**
+- `/secrets` - Audit current directory
+- Reports issues by severity: CRITICAL, HIGH, MEDIUM, LOW
+
+**Output:**
+- Specific files and line numbers with potential secrets
+- Recommended remediation actions
+- Summary of issues found
+
+See `.claude/skills/secrets/reference.md` for secret patterns and remediation steps.
+
 ### Automated Testing & Linting Hooks
 
 Post-edit hooks automatically test and lint code after Claude Code edits files:
@@ -169,6 +190,23 @@ Runs automatically when `.js`, `.jsx`, `.ts`, `.tsx`, `.css`, or `.scss` files a
 - Silent when auto-fixes succeed
 - Notifies on test failures or unfixable lint errors
 - Uses the notification system from `.bash_aliases`
+
+#### Secrets Protection Hook (`~/.claude/hooks/block-secrets.sh`)
+Runs **before** Read, Edit, or Write operations to block access to sensitive files.
+
+**Blocked file patterns:**
+- Environment files: `.env`, `.env.*`
+- Credentials: `credentials.json`, `secrets.json`, `secrets.yaml`
+- Private keys: `*.pem`, `*.key`, `id_rsa`, `id_ed25519`, etc.
+- SSH directory: `~/.ssh/*`
+- Cloud credentials: `~/.aws/credentials`, `~/.kube/config`, service account JSONs
+- Auth files: `.npmrc`, `.netrc`, `.htpasswd`, `~/.docker/config.json`
+- Terraform state: `*.tfstate`
+- Token/password/API key files
+
+**Hook Behavior:**
+- **Blocking** - prevents the operation entirely
+- Returns clear error message explaining why access was denied
 
 **Hook Permissions:**
 The hooks are pre-approved in `.claude/settings.json` to run without prompts.
