@@ -56,6 +56,11 @@ else
     echo -e "${GREEN}✓${NC} TPM already installed"
 fi
 
+# Install tmux plugins via TPM
+echo -e "${BLUE}Installing tmux plugins...${NC}"
+~/.tmux/plugins/tpm/bin/install_plugins
+echo -e "${GREEN}✓${NC} Tmux plugins installed"
+
 # Install Starship if not present
 if ! command -v starship &> /dev/null; then
     echo -e "${BLUE}Installing Starship prompt...${NC}"
@@ -253,8 +258,6 @@ echo -e "To apply the changes, run:"
 echo -e "  ${BLUE}source ~/.bashrc${NC}"
 echo -e "\nOr restart your terminal.\n"
 
-echo -e "${YELLOW}Tmux Setup:${NC}"
-echo -e "  1. Start tmux: ${BLUE}tmux${NC}"
-echo -e "  2. Install plugins: Press ${BLUE}Ctrl+b${NC} then ${BLUE}Shift+I${NC}"
-echo -e "  3. See ${BLUE}.dotfiles/tmux/README.md${NC} for more information\n"
+echo -e "${YELLOW}Tmux:${NC}"
+echo -e "  Plugins auto-installed. See ${BLUE}.dotfiles/tmux/README.md${NC} for keybindings.\n"
 
