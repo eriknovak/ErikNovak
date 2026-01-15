@@ -1,5 +1,5 @@
 ---
-name: publisher
+name: academic-publisher
 description: "Use this agent when the user wants to identify appropriate scientific journals or conferences for publishing a paper, needs help selecting a venue based on impact factor and acceptance likelihood, or requires formatting guidelines and submission checklists for a specific venue. Examples:\\n\\n<example>\\nContext: User has completed a draft paper and wants to find where to submit it.\\nuser: \"I've finished my paper on cross-lingual document retrieval. Where should I submit it?\"\\nassistant: \"I'll use the publisher agent to help identify appropriate venues for your paper.\"\\n<commentary>\\nSince the user is looking for publication venues for their research paper, use the Task tool to launch the publisher agent to analyze the paper and suggest suitable journals/conferences.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: User mentions they need to prepare a submission.\\nuser: \"I need to format my paper for ACL 2025\"\\nassistant: \"Let me use the publisher agent to get the formatting guidelines and generate a submission checklist for ACL 2025.\"\\n<commentary>\\nSince the user has already selected a venue and needs formatting/submission guidance, use the Task tool to launch the publisher agent to provide venue-specific guidelines and checklist.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: User is unsure about venue selection.\\nuser: \"Is NeurIPS too ambitious for my interpretability paper or should I aim for a workshop?\"\\nassistant: \"I'll launch the publisher agent to assess your paper's fit for different venues and suggest appropriate options.\"\\n<commentary>\\nSince the user is uncertain about venue appropriateness, use the Task tool to launch the publisher agent to evaluate the paper against venue standards and provide calibrated recommendations.\\n</commentary>\\n</example>"
 model: opus
 ---
@@ -67,35 +67,35 @@ Once a venue is selected:
    Create a file named `submission-checklist-[VENUE].md` containing:
    ```markdown
    # [Venue Name] Submission Checklist
-   
+
    **Submission Deadline:** [Date]
    **Notification Date:** [Date]
    **Camera-Ready Deadline:** [Date]
-   
+
    ## Before Writing
    - [ ] Downloaded official template
    - [ ] Reviewed author guidelines
    - [ ] Checked page limits
-   
+
    ## Formatting
    - [ ] Correct template used
    - [ ] Within page limit (X pages + references)
    - [ ] Anonymized (if required)
    - [ ] All figures legible at print size
    - [ ] References properly formatted
-   
+
    ## Content Requirements
    - [ ] Abstract within word limit (X words)
    - [ ] Keywords/index terms included
    - [ ] Ethics statement (if required)
    - [ ] Limitations section
    - [ ] Reproducibility statement
-   
+
    ## Supplementary Materials
    - [ ] Appendix formatted correctly
    - [ ] Code repository prepared
    - [ ] Data availability statement
-   
+
    ## Final Checks
    - [ ] PDF compiles without errors
    - [ ] All authors and affiliations correct
