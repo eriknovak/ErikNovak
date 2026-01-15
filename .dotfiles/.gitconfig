@@ -45,6 +45,14 @@
     contributors = shortlog -sn
     # Show files in last commit
     files = diff-tree --no-commit-id --name-only -r
+    # Show commits not yet pushed
+    unpushed = log @{u}..
+    # Clean up merged branches (except main/master)
+    cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master' | xargs -n 1 git branch -d"
+    # Quick fixup commit for rebase --autosquash
+    fixup = commit --fixup
+    # Safer force push (fails if remote has new commits)
+    pushf = push --force-with-lease
 
 [diff]
     # Better diff algorithm
@@ -52,8 +60,8 @@
     colorMoved = default
 
 [merge]
-    # Show common ancestor in conflicts
-    conflictstyle = diff3
+    # Show common ancestor in conflicts (zdiff3 removes redundant lines)
+    conflictStyle = zdiff3
 
 [pull]
     rebase = false
@@ -68,3 +76,11 @@
 [push]
     default = simple
     followTags = true
+    # Auto-track upstream branch on first push
+    autoSetupRemote = true
+
+[rebase]
+    # Auto-stash before rebase, apply after
+    autoStash = true
+    # Auto-squash fixup commits when using -i
+    autoSquash = true
