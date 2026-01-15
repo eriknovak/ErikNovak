@@ -54,7 +54,6 @@ alias .....='cd ../../../..'
 #============================
 
 # give color to grep and redirect it to egrep
-alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias grep='grep --colour=auto'
 
@@ -77,6 +76,16 @@ alias glog='git log --oneline --graph --decorate --all -20'
 alias glg='git lg'
 alias gbr='git branch -v'
 alias gco='git checkout'
+# git stash shortcuts
+alias gst='git stash'
+alias gstp='git stash pop'
+alias gstl='git stash list'
+# git advanced shortcuts
+alias gcp='git cherry-pick'
+alias grb='git rebase'
+alias grbi='git rebase -i'
+alias gundo='git reset --soft HEAD~1'
+alias gwip='git add -A && git commit -m "WIP"'
 
 
 #============================
@@ -115,7 +124,7 @@ alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
 
 # quick file search
 alias ff='find . -type f -name'
-alias fd='find . -type d -name'
+alias fdir='find . -type d -name'
 
 # show PATH in readable format
 alias path='echo $PATH | tr ":" "\n"'
@@ -135,4 +144,31 @@ if command -v eza &> /dev/null; then
     alias lsize='eza -lh --sort=size --reverse --icons'
     alias tree='eza --tree --icons'
     alias ltree='eza --tree --level=2 --icons'
+    alias lh='eza -lha --group-directories-first --icons | grep "^\."'
 fi
+
+
+#============================
+# DIRECTORY SHORTCUTS
+#============================
+
+alias md='mkdir -p'
+alias rd='rmdir'
+
+
+#============================
+# CLIPBOARD ALIAS
+#============================
+
+if command -v xclip &> /dev/null; then
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
+fi
+
+
+#============================
+# QUICK CONFIG EDIT
+#============================
+
+alias ea='${EDITOR:-vim} ~/.bash_aliases && source ~/.bash_aliases'
+alias eb='${EDITOR:-vim} ~/.bashrc && source ~/.bashrc'
