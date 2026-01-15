@@ -88,16 +88,6 @@ For tmux setup:
   - `tree` - tree view
   - `ltree` - tree view (2 levels)
 
-### Notification System
-Terminal notifications with bell and visual feedback:
-- `notify-done "message"` - Success notification
-- `notify-error "message"` - Error notification
-- `notify-action "message"` - Action required notification
-- `notify "title" "message"` - Generic notification
-- `run-notify command args` - Run command and notify on completion
-- `command && notify-me` - Notify when command finishes
-- Perfect for long-running tasks, builds, tests, model training
-
 ## Architecture Notes
 
 - All configuration files are symlinked from ~/.dotfiles/ to their expected locations
@@ -174,7 +164,6 @@ Post-edit hooks automatically test and lint code after Claude Code edits files:
 Runs automatically when `.py` files are edited:
 - **Testing:** Runs `pytest` on modified file
 - **Linting:** Runs `ruff check --fix` with auto-fixes
-- **Notifications:** Terminal alerts for test failures or lint errors
 
 #### JavaScript/TypeScript Hook (`~/.claude/hooks/js-test-lint.sh`)
 Runs automatically when `.js`, `.jsx`, `.ts`, `.tsx`, `.css`, or `.scss` files are edited:
@@ -183,13 +172,10 @@ Runs automatically when `.js`, `.jsx`, `.ts`, `.tsx`, `.css`, or `.scss` files a
   - JS/TS: `eslint --fix` with auto-fixes
   - CSS/SCSS: `stylelint --fix` with auto-fixes
 - **Formatting:** `prettier --write` for all file types
-- **Notifications:** Terminal alerts for test failures or lint errors
 
 **Hook Behavior:**
 - Non-blocking (won't prevent edits)
-- Silent when auto-fixes succeed
-- Notifies on test failures or unfixable lint errors
-- Uses the notification system from `.bash_aliases`
+- Silent operation (auto-fixes applied without output)
 
 #### Secrets Protection Hook (`~/.claude/hooks/block-secrets.sh`)
 Runs **before** Read, Edit, or Write operations to block access to sensitive files.

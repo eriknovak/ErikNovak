@@ -15,11 +15,9 @@ Hooks are triggered by the `PostToolUse` event configured in `~/.claude/settings
 **Actions:**
 1. **Testing:** Runs `pytest` on the modified file
 2. **Linting:** Runs `ruff check --fix` with automatic fixes
-3. **Notifications:** Alerts via terminal notification system
 
 **Exit Codes:**
 - Always exits 0 (non-blocking)
-- Failures are communicated via notifications only
 
 **Requirements:**
 - `pytest` (optional) - For running tests
@@ -36,11 +34,9 @@ Hooks are triggered by the `PostToolUse` event configured in `~/.claude/settings
    - JS/TS: `eslint --fix` with automatic fixes
    - CSS/SCSS: `stylelint --fix` with automatic fixes
 3. **Formatting:** Runs `prettier --write` on all file types
-4. **Notifications:** Alerts via terminal notification system
 
 **Exit Codes:**
 - Always exits 0 (non-blocking)
-- Failures are communicated via notifications only
 
 **Requirements:**
 - `npm` (optional) - For running tests
@@ -48,37 +44,6 @@ Hooks are triggered by the `PostToolUse` event configured in `~/.claude/settings
 - `stylelint` (optional) - For CSS/SCSS linting
 - `prettier` (optional) - For formatting
 - `jq` - For parsing JSON input
-
-## Notification System
-
-Both hooks use the notification functions from `~/.bash_aliases`:
-
-- `notify-done` - Success notifications (tests passed, code clean)
-- `notify-action` - Requires attention (tests failed, unfixable lint errors)
-
-Notifications include:
-- Visual bell in terminal
-- Colored output messages
-- File name for context
-
-## Smart Notification Logic
-
-Hooks implement intelligent notification rules:
-
-### When to Notify
-
-**Success (notify-done):**
-- Tests passed after editing
-- Code quality checks passed (if no tests available)
-
-**Requires Action (notify-action):**
-- Tests failed
-- Linting errors that couldn't be auto-fixed
-
-**Silent (no notification):**
-- Auto-fixes applied successfully
-- No testing/linting tools available
-- File skipped (wrong type)
 
 ## Hook Configuration
 
@@ -169,7 +134,6 @@ Extend the scripts to add additional tools:
 # Add mypy type checking to Python hook
 if command -v mypy &> /dev/null; then
     mypy "$FILE" &> /dev/null
-    MYPY_RESULT=$?
 fi
 ```
 
@@ -191,18 +155,6 @@ fi
 3. Test hook manually:
    ```bash
    echo '{"tool_input":{"file_path":"test.py"}}' | ~/.claude/hooks/python-test-lint.sh
-   ```
-
-### Notifications Not Appearing
-
-1. Source bash aliases:
-   ```bash
-   source ~/.bash_aliases
-   ```
-
-2. Test notification functions:
-   ```bash
-   notify-done "Test message"
    ```
 
 ### Tools Not Found
@@ -230,5 +182,4 @@ To add a new hook:
 ## References
 
 - [Claude Code Hooks Documentation](https://github.com/anthropics/claude-code)
-- [Notification System](.dotfiles/bash/.bash_aliases)
 - [Settings Configuration](.dotfiles/.claude/settings.json)
