@@ -21,6 +21,7 @@ This is the main script that installs all configurations by creating symlinks fr
 - Installs Catppuccin vim theme
 - Creates necessary directories (nano backups, ~/.config)
 - Creates symlinks for all configuration files
+- Symlinks `~/.claude/` for Claude Code configuration
 - Prompts for Git user configuration (creates ~/.gitconfig.local)
 
 ### After Setup
@@ -106,96 +107,155 @@ Claude Code is automatically installed by the setup script. After installation, 
 claude auth
 ```
 
+The setup script symlinks `~/.dotfiles/.dotfiles/.claude/` to `~/.claude/`, providing version-controlled Claude Code configuration.
+
+### Directory Structure
+
+```
+~/.claude/
+├── CLAUDE.md           # Global instructions and preferences
+├── settings.json       # Permissions, hooks, and skill config
+├── agents/             # Specialized agent definitions
+├── commands/           # Custom slash commands
+├── hooks/              # Pre/post tool-use hooks
+├── rules/              # Modular development guidelines
+└── skills/             # Personal skills for workflows
+```
+
 ### Custom Skills
 
-This repository includes custom skills for Claude Code to enhance development workflows:
+Skills are reusable workflows invoked with slash commands:
 
-#### `/fix` - Bug Fix Skill
-Interactive workflow for identifying, fixing, and validating bugs in Python and Node.js projects.
+#### `/commit` - Conventional Commits
+Creates well-formatted git commits following Conventional Commits spec.
+- Analyzes staged changes to determine commit type
+- Types: feat, fix, docs, style, refactor, perf, test, build, ci, chore
+- Prompts for user approval before committing
 
-**Features:**
-- Automatically detects project type (Python or Node.js)
-- Runs tests to identify failures (pytest, jest, npm test)
+#### `/commit-push` - Commit and Push
+Combines commit workflow with automatic push to remote.
+- Creates conventional commit
+- Handles new branches with `git push -u`
+- Checks remote tracking before pushing
+
+#### `/commit-pr` - Commit, Push, and Create PR
+Complete workflow for pull request creation.
+- Creates conventional commit and pushes
+- Uses GitHub CLI (gh) for PR creation
+- Generates PR body from commit messages
+- Supports draft PRs, labels, and reviewers
+
+#### `/fix` - Bug Fix Workflow
+Interactive bug fixing for Python and Node.js projects.
+- Automatically detects project type
+- Runs tests (pytest, npm test)
 - Checks for type errors (mypy, TypeScript)
-- Validates syntax and execution
-- Provides structured output for bug diagnosis
-
-**Usage:**
-- `/fix` - Run bug detection in current directory
-- `/fix path/to/project` - Run in specific directory
+- Validates fixes before completing
 
 **What it checks:**
 - **Python:** pytest tests, mypy type checking, syntax validation
 - **Node.js:** npm test, TypeScript compilation, syntax validation
 
-See `.claude/skills/fix/reference.md` for detailed documentation.
-
-#### `/lint` - Code Quality Skill
+#### `/lint` - Code Quality
 Intelligently detects project type and runs appropriate linting tools.
+- **Python:** ruff (preferred), flake8, pylint
+- **JavaScript/TypeScript:** eslint
 
-**Supported languages:** Python (ruff, flake8, pylint), JavaScript/TypeScript (eslint)
+#### `/proofread` - Document Proofreading
+Senior editor proofreading for grammar, structure, and notation.
+- Especially useful for LaTeX and scientific writing
+- Highlights mistakes with explanations
+- Suggests specific fixes
 
-#### `/secrets` - Secrets Audit Skill
-Audits codebase for proper secret handling and identifies potential security issues.
+#### `/secrets` - Security Audit
+Audits codebase for secret handling issues.
 
 **What it checks:**
-- Committed `.env` files and other secret files in git
+- Committed `.env` files and secret files in git
 - Missing `.gitignore` patterns for sensitive files
 - Missing `.env.example` templates
-- Hardcoded secrets in source code (AWS keys, GitHub tokens, Stripe keys, passwords)
-- Private key content embedded in source files
-
-**Usage:**
-- `/secrets` - Audit current directory
-- Reports issues by severity: CRITICAL, HIGH, MEDIUM, LOW
+- Hardcoded secrets (AWS keys, GitHub tokens, Stripe keys, passwords)
+- Private key content in source files
 
 **Output:**
-- Specific files and line numbers with potential secrets
-- Recommended remediation actions
-- Summary of issues found
+- Issues by severity: CRITICAL, HIGH, MEDIUM, LOW
+- Specific files and line numbers
+- Remediation actions
 
-See `.claude/skills/secrets/reference.md` for secret patterns and remediation steps.
+### Custom Commands
 
-### Automated Testing & Linting Hooks
+#### `/latex-build` - LaTeX Compilation
+Builds LaTeX projects using pdflatex + bibtex with three-pass compilation.
+- Handles bibliography compilation
+- Reports errors and warnings
 
-Post-edit hooks automatically test and lint code after Claude Code edits files:
+### Specialized Agents
 
-#### Python Hook (`~/.claude/hooks/python-test-lint.sh`)
+Four custom agents available via Task tool:
+
+#### `academic-publisher`
+Academic publishing advisor for venue selection.
+- Analyzes papers and recommends journals/conferences
+- Provides submission guidelines and checklists
+- Searches for current deadlines and impact factors
+
+#### `developer-frontend`
+UI/UX development expert for React applications.
+- React + Vite component architecture
+- Accessibility (WCAG 2.1 AA) standards
+- CSS Modules and BEM naming conventions
+- Design system tokens and UX patterns
+
+#### `developer-backend`
+Backend development expert for APIs and services.
+- API design and security practices
+- Database patterns and optimization
+- Authentication/authorization implementation
+- Frontend/service integration
+
+#### `developer-reviewer`
+Senior code reviewer for quality assurance.
+- Security vulnerability detection
+- Bug identification and edge case analysis
+- Design pattern consistency
+- Language-specific focus (Python, JS/TS, React)
+
+### Development Rules
+
+Modular guidelines in `~/.claude/rules/` auto-loaded by Claude:
+
+- **python.md** - Google Style Guide, type hints, uv, pytest
+- **react-vite.md** - Project structure, CSS Modules, Storybook, Vitest
+- **scientific-papers.md** - Paper structure, LaTeX notation, citations
+
+### Automated Hooks
+
+#### PreToolUse: Secrets Protection (`block-secrets.sh`)
+Runs **before** Read, Edit, or Write operations to block access to sensitive files.
+
+**Blocked patterns:**
+- Environment files: `.env`, `.env.*`
+- Credentials: `credentials.json`, `secrets.json`, `secrets.yaml`
+- Private keys: `*.pem`, `*.key`, `id_rsa`, `id_ed25519`
+- SSH directory: `~/.ssh/*`
+- Cloud credentials: `~/.aws/credentials`, `~/.kube/config`
+- Auth files: `.npmrc`, `.netrc`, `~/.docker/config.json`
+- Terraform state: `*.tfstate`
+
+**Behavior:** Blocking - prevents the operation entirely
+
+#### PostToolUse: Python Testing & Linting (`python-test-lint.sh`)
 Runs automatically when `.py` files are edited:
 - **Testing:** Runs `pytest` on modified file
 - **Linting:** Runs `ruff check --fix` with auto-fixes
 
-#### JavaScript/TypeScript Hook (`~/.claude/hooks/js-test-lint.sh`)
-Runs automatically when `.js`, `.jsx`, `.ts`, `.tsx`, `.css`, or `.scss` files are edited:
-- **Testing:** Runs `npm test` on modified file (JS/TS only)
-- **Linting:**
-  - JS/TS: `eslint --fix` with auto-fixes
-  - CSS/SCSS: `stylelint --fix` with auto-fixes
-- **Formatting:** `prettier --write` for all file types
+#### PostToolUse: JS/TS Testing & Linting (`js-test-lint.sh`)
+Runs automatically when `.js`, `.jsx`, `.ts`, `.tsx`, `.css`, `.scss` files are edited:
+- **Testing:** Runs `npm test` (JS/TS only)
+- **Linting:** `eslint --fix` (JS/TS), `stylelint --fix` (CSS/SCSS)
+- **Formatting:** `prettier --write`
 
-**Hook Behavior:**
-- Non-blocking (won't prevent edits)
-- Silent operation (auto-fixes applied without output)
-
-#### Secrets Protection Hook (`~/.claude/hooks/block-secrets.sh`)
-Runs **before** Read, Edit, or Write operations to block access to sensitive files.
-
-**Blocked file patterns:**
-- Environment files: `.env`, `.env.*`
-- Credentials: `credentials.json`, `secrets.json`, `secrets.yaml`
-- Private keys: `*.pem`, `*.key`, `id_rsa`, `id_ed25519`, etc.
-- SSH directory: `~/.ssh/*`
-- Cloud credentials: `~/.aws/credentials`, `~/.kube/config`, service account JSONs
-- Auth files: `.npmrc`, `.netrc`, `.htpasswd`, `~/.docker/config.json`
-- Terraform state: `*.tfstate`
-- Token/password/API key files
-
-**Hook Behavior:**
-- **Blocking** - prevents the operation entirely
-- Returns clear error message explaining why access was denied
-
-**Hook Permissions:**
-The hooks are pre-approved in `.claude/settings.json` to run without prompts.
+**Behavior:** Non-blocking, silent on success
 
 ## Dependencies
 
@@ -208,11 +268,9 @@ External tools installed by setup.sh:
 - Starship prompt (via curl installer)
 - TPM (Tmux Plugin Manager)
 - nvm (Node Version Manager)
-- Claude Code (AI coding assistant)
-- Modern terminal tools:
-  - eza (modern ls replacement)
+- Modern terminal tools: eza
 - Catppuccin vim theme
 
 Optional tools (recommended for hooks):
-- Python: `pytest`, `ruff` (for testing/linting)
-- JavaScript: `eslint`, `prettier`, `stylelint` (for linting/formatting)
+- Python: `pytest`, `ruff`, `mypy`
+- JavaScript: `eslint`, `prettier`, `stylelint`

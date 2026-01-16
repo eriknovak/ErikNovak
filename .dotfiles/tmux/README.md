@@ -68,6 +68,7 @@ If you remove a plugin from `.tmux.conf`, press `prefix + alt + u` to uninstall 
 - **catppuccin/tmux** - Beautiful Catppuccin Mocha theme
 - **tmux-cpu** - CPU usage display in status bar
 - **tmux-battery** - Battery status display in status bar
+- **tmux-resurrect** - Session persistence (save/restore sessions)
 
 ## Custom Key Bindings
 
@@ -96,6 +97,11 @@ If you remove a plugin from `.tmux.conf`, press `prefix + alt + u` to uninstall 
 - Start selection: `v`
 - Copy selection: `y`
 - Paste: `prefix + ]`
+
+### Session Persistence (tmux-resurrect)
+
+- `prefix + Ctrl-s` - Save session
+- `prefix + Ctrl-r` - Restore session
 
 ## Features
 

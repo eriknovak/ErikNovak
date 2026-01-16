@@ -96,6 +96,7 @@ Creates symlinks from `~/.dotfiles/` to your home directory for:
 - `.gitconfig`, `.nanorc`, `.vimrc`
 - `.tmux.conf`
 - `.config/starship.toml`
+- `.claude/` (Claude Code configuration with skills, hooks, and rules)
 
 **Note:** Existing files are backed up with a `.backup` extension.
 
@@ -291,19 +292,28 @@ claude "write a python script" # One-off task
 claude auth                    # Authenticate
 ```
 
+**Custom Skills:**
+
+```bash
+/commit        # Create conventional commit
+/commit-push   # Commit and push to remote
+/commit-pr     # Commit, push, and create PR
+/fix           # Interactive bug fixing (Python/Node.js)
+/lint          # Smart linting (auto-detects project type)
+/proofread     # Grammar and notation proofreading
+/secrets       # Audit codebase for secret handling issues
+/latex-build   # Build LaTeX projects
+```
+
 **Automatic Testing & Linting:**
 
-Post-edit hooks automatically run after Claude Code edits files:
-- **Python files** - Runs pytest and ruff with auto-fixes
-- **JS/TS files** - Runs npm test, eslint, and prettier
-- **CSS/SCSS files** - Runs stylelint and prettier
+Hooks automatically run when Claude Code edits files:
+- **PreToolUse:** `block-secrets.sh` prevents access to sensitive files
+- **PostToolUse (Python):** Runs pytest and ruff with auto-fixes
+- **PostToolUse (JS/TS):** Runs npm test, eslint, and prettier
+- **PostToolUse (CSS/SCSS):** Runs stylelint and prettier
 
-Terminal notifications alert you to:
-- Test failures
-- Unfixable lint errors
-- Successful checks (tests passed)
-
-Hooks are non-blocking and exit silently on success.
+Hooks are non-blocking (PostToolUse) or blocking (PreToolUse for secrets).
 
 ---
 

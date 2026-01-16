@@ -1,14 +1,39 @@
 # Claude Code Hooks
 
-This directory contains post-edit hooks that automatically test and lint code after Claude Code edits files.
+This directory contains hooks that run before or after Claude Code tool use.
 
 ## Overview
 
-Hooks are triggered by the `PostToolUse` event configured in `~/.claude/settings.json`. They run automatically when Claude Code uses the `Write` or `Edit` tools on supported file types.
+Hooks are triggered by `PreToolUse` and `PostToolUse` events configured in `~/.claude/settings.json`. They provide:
+- **Security:** Block access to sensitive files before operations
+- **Quality:** Auto-test and lint code after edits
 
 ## Available Hooks
 
-### `python-test-lint.sh`
+### `block-secrets.sh` (PreToolUse)
+
+**Triggers:** Before `Read`, `Edit`, or `Write` operations
+
+**Purpose:** Prevents Claude Code from accessing sensitive files.
+
+**Blocked patterns:**
+- Environment files: `.env`, `.env.*`
+- Credentials: `credentials.json`, `secrets.json`, `secrets.yaml`
+- Private keys: `*.pem`, `*.key`, `id_rsa`, `id_ed25519`, `id_ecdsa`
+- SSH config: `~/.ssh/*`
+- Cloud credentials: `~/.aws/credentials`, `~/.kube/config`
+- Auth files: `.npmrc`, `.netrc`, `.htpasswd`, `~/.docker/config.json`
+- GPG secrets: `~/.gnupg/*`
+- Terraform state: `*.tfstate`
+- Token/password/API key files
+
+**Exit Codes:**
+- `0` - File is safe, proceed
+- `2` - File blocked, operation denied
+
+**Behavior:** Blocking - prevents the operation entirely with clear error message.
+
+### `python-test-lint.sh` (PostToolUse)
 
 **Triggers:** When `.py` files are edited
 
@@ -52,18 +77,30 @@ Hooks are configured in `~/.claude/settings.json`:
 ```json
 {
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/erikn/.claude/hooks/block-secrets.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/python-test-lint.sh",
+            "command": "/home/erikn/.claude/hooks/python-test-lint.sh",
             "timeout": 30
           },
           {
             "type": "command",
-            "command": "~/.claude/hooks/js-test-lint.sh",
+            "command": "/home/erikn/.claude/hooks/js-test-lint.sh",
             "timeout": 45
           }
         ]
@@ -75,7 +112,7 @@ Hooks are configured in `~/.claude/settings.json`:
 
 ## Permissions
 
-The hooks require certain bash commands to run without prompts. These are pre-approved in `~/.claude/settings.json`:
+The settings.json pre-approves common development commands:
 
 ```json
 {
@@ -83,20 +120,11 @@ The hooks require certain bash commands to run without prompts. These are pre-ap
     "allow": [
       "Bash(cat:*)",
       "Bash(tree:*)",
-      "Bash(chmod:*)"
-    ]
-  }
-}
-```
-
-The hooks themselves also have automatic approval in settings:
-
-```json
-{
-  "permissions": {
-    "allow": [
-      "Bash(~/.claude/hooks/python-test-lint.sh:*)",
-      "Bash(~/.claude/hooks/js-test-lint.sh:*)"
+      "Bash(chmod:*)",
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(pytest:*)",
+      "Bash(ruff:*)"
     ]
   }
 }
