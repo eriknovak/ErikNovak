@@ -83,7 +83,7 @@ Hooks are configured in `~/.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "/home/erikn/.claude/hooks/block-secrets.sh",
+            "command": "~/.claude/hooks/block-secrets.sh",
             "timeout": 5
           }
         ]
@@ -95,12 +95,12 @@ Hooks are configured in `~/.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "/home/erikn/.claude/hooks/python-test-lint.sh",
+            "command": "~/.claude/hooks/python-test-lint.sh",
             "timeout": 30
           },
           {
             "type": "command",
-            "command": "/home/erikn/.claude/hooks/js-test-lint.sh",
+            "command": "~/.claude/hooks/js-test-lint.sh",
             "timeout": 45
           }
         ]
