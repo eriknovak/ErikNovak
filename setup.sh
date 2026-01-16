@@ -34,6 +34,7 @@ declare -A FILES=(
     [".dotfiles/.claude/README.md"]="$HOME/.claude/README.md"
     [".dotfiles/.claude/settings.json"]="$HOME/.claude/settings.json"
     [".dotfiles/.claude/agents"]="$HOME/.claude/agents"
+    [".dotfiles/.claude/commands"]="$HOME/.claude/commands"
     [".dotfiles/.claude/hooks"]="$HOME/.claude/hooks"
     [".dotfiles/.claude/rules"]="$HOME/.claude/rules"
     [".dotfiles/.claude/skills"]="$HOME/.claude/skills"
