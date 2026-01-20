@@ -14,6 +14,7 @@ export PATH="$PATH:/$HOME/.local/bin"
 # STARSHIP                                                           #
 #====================================================================#
 
+export STARSHIP_LOG=error
 eval "$(starship init bash)"
 
 #====================================================================#
