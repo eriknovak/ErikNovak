@@ -8,7 +8,7 @@ if [ -f $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 
-export PATH="$PATH:/$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.claude/bin"
 
 #====================================================================#
 # STARSHIP                                                           #
