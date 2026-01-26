@@ -44,7 +44,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/erikn/.claude/hooks/block-secrets.sh",
+            "command": "~/.claude/hooks/block-secrets.sh",
+            "async": true,
             "timeout": 5
           }
         ]
@@ -56,12 +57,14 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/erikn/.claude/hooks/python-test-lint.sh",
+            "command": "~/.claude/hooks/python-test-lint.sh",
+            "async": true,
             "timeout": 30
           },
           {
             "type": "command",
-            "command": "/home/erikn/.claude/hooks/js-test-lint.sh",
+            "command": "~/.claude/hooks/js-test-lint.sh",
+            "async": true,
             "timeout": 45
           }
         ]
