@@ -31,6 +31,9 @@ npm install -D vitest @testing-library/react @testing-library/jest-dom @testing-
 # Install CSS Modules type definitions
 npm install -D typescript-plugin-css-modules
 
+# Install classnames for class concatenation
+npm install classnames
+
 # Install bundle analyzer
 npm install -D rollup-plugin-visualizer
 ```
@@ -44,12 +47,12 @@ src/
 ├── components/           # Reusable UI components
 │   └── Button/
 │       ├── index.tsx           # Component implementation
-│       ├── style.module.css    # Component-specific styles
+│       ├── styles.module.css    # Component-specific styles
 │       └── index.stories.ts    # Storybook stories
 ├── pages/               # Page layouts (no component definitions)
 │   └── HomePage/
 │       ├── index.tsx           # Page layout (imports components)
-│       └── style.module.css    # Page-specific styles
+│       └── styles.module.css    # Page-specific styles
 ├── hooks/               # Custom React hooks
 │   ├── useAuth.ts
 │   └── useFetch.ts
@@ -77,8 +80,8 @@ src/
 ### Structure Rules
 
 1. **Components** - Each component must have:
-   - `index.tsx` - Component implementation
-   - `style.module.css` - Component-specific styles using CSS Modules
+   - `index.tsx` - Component implementation (must use `export default`)
+   - `styles.module.css` - Component-specific styles using CSS Modules
    - `index.stories.ts` - Storybook stories (when using Storybook)
 
 2. **Pages** - Page components should:
@@ -208,10 +211,13 @@ Update TypeScript config to support path aliases:
 
 ### Component Template
 
+**IMPORTANT**: All `index.tsx` and `index.jsx` files must use `export default` for the main component.
+
 ```typescript
 // src/components/Button/index.tsx
 import React from 'react';
-import styles from './style.module.css';
+import classNames from 'classnames';
+import styles from './styles.module.css';
 
 interface ButtonProps {
   label: string;
@@ -220,7 +226,7 @@ interface ButtonProps {
   disabled?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   label,
   variant = 'primary',
   onClick,
@@ -228,7 +234,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`${styles.button} ${styles[`button--${variant}`]}`}
+      className={classNames(styles.button, styles[`button--${variant}`])}
       onClick={onClick}
       disabled={disabled}
     >
@@ -236,6 +242,8 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+export default Button;
 ```
 
 ### CSS Modules
@@ -252,8 +260,42 @@ Examples:
 
 Access in JS: `styles['button--primary']` or `styles.buttonPrimary` (CSS Modules auto-converts)
 
+### Class Concatenation with classnames
+
+**When `classnames` is installed in the project, always use it for combining CSS classes.** Never use template literals or string concatenation.
+
+```typescript
+import classNames from 'classnames';
+import styles from './styles.module.css';
+
+// ✅ Correct - use classNames for all class concatenation
+className={classNames(styles.button, styles['button--primary'])}
+
+// ✅ Correct - conditional classes
+className={classNames(styles.button, {
+  [styles['button--active']]: isActive,
+  [styles['button--disabled']]: disabled,
+})}
+
+// ✅ Correct - multiple conditions
+className={classNames(
+  styles.card,
+  styles[`card--${variant}`],
+  { [styles['card--highlighted']]: isHighlighted }
+)}
+
+// ❌ Wrong - template literals
+className={`${styles.button} ${styles['button--primary']}`}
+
+// ❌ Wrong - string concatenation
+className={styles.button + ' ' + styles['button--primary']}
+
+// ❌ Wrong - conditional with ternary in template
+className={`${styles.button} ${isActive ? styles['button--active'] : ''}`}
+```
+
 ```css
-/* src/components/Button/style.module.css */
+/* src/components/Button/styles.module.css */
 .button {
   padding: 0.5rem 1rem;
   border: none;
@@ -292,7 +334,7 @@ Access in JS: `styles['button--primary']` or `styles.buttonPrimary` (CSS Modules
 ```typescript
 // src/components/Button/index.stories.ts
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './index';
+import Button from './index';
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -335,20 +377,21 @@ export const Disabled: Story = {
 
 ### Page Template (Correct)
 
-Pages should **only import and compose components**, never define them:
+Pages should **only import and compose components**, never define them.
+**IMPORTANT**: Page `index.tsx` files must also use `export default`.
 
 ```typescript
 // src/pages/HomePage/index.tsx
 import React, { useEffect, useState } from 'react';
-import { Button } from '@components/Button';
-import { Header } from '@components/Header';
-import { ProductList } from '@components/ProductList';
+import Button from '@components/Button';
+import Header from '@components/Header';
+import ProductList from '@components/ProductList';
 import { useFetch } from '@hooks/useFetch';
 import { getProducts } from '@api/products';
 import type { Product } from '@types';
-import styles from './style.module.css';
+import styles from './styles.module.css';
 
-export const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {
   const { data: products, loading, error } = useFetch<Product[]>(getProducts);
 
   if (loading) return <div>Loading...</div>;
@@ -365,6 +408,8 @@ export const HomePage: React.FC = () => {
     </div>
   );
 };
+
+export default HomePage;
 ```
 
 ### Page Anti-Pattern (Incorrect)
@@ -670,7 +715,7 @@ afterEach(() => {
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Button } from '../index';
+import Button from '../index';
 
 describe('Button', () => {
   it('renders with label', () => {
@@ -754,11 +799,12 @@ module.exports = {
 
 1. **Use TypeScript** - Strict mode enabled, no `any` types
 2. **CSS Modules** - Always use CSS Modules for component styling
-3. **Path Aliases** - Use `@` prefixed aliases instead of relative imports
-4. **Component Composition** - Pages should never define components
-5. **Single Responsibility** - Each component should have one clear purpose
-6. **Immutable State** - Never mutate state directly
-7. **Avoid Index Imports** - Import named exports explicitly
+3. **classnames for classes** - When `classnames` is installed, always use it for class concatenation (never template literals)
+4. **Path Aliases** - Use `@` prefixed aliases instead of relative imports
+5. **Component Composition** - Pages should never define components
+6. **Single Responsibility** - Each component should have one clear purpose
+7. **Immutable State** - Never mutate state directly
+8. **Default Exports** - All `index.tsx`/`index.jsx` must use `export default` for the main component
 
 ### Import Order
 
@@ -766,9 +812,10 @@ module.exports = {
 // 1. React and third-party libraries
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import classNames from 'classnames';
 
-// 2. Path-aliased imports (components, hooks, etc.)
-import { Button } from '@components/Button';
+// 2. Path-aliased imports (components use default imports, hooks/api use named)
+import Button from '@components/Button';
 import { useFetch } from '@hooks/useFetch';
 import { getProducts } from '@api/products';
 
@@ -776,7 +823,7 @@ import { getProducts } from '@api/products';
 import type { Product } from '@types';
 
 // 4. Styles (always last)
-import styles from './style.module.css';
+import styles from './styles.module.css';
 ```
 
 ### Naming Conventions
@@ -802,13 +849,14 @@ import styles from './style.module.css';
 1. ❌ Defining components inside page files
 2. ❌ Using relative imports when path aliases are configured
 3. ❌ Not using CSS Modules (using global styles instead)
-4. ❌ Skipping Storybook stories for reusable components
-5. ❌ Mixing API logic with component logic
-6. ❌ Not grouping related types and API functions
-7. ❌ Using `lodash` instead of `lodash-es`
-8. ❌ Excessive plugins in Vite config
-9. ❌ Not utilizing environment variables for config
-10. ❌ Ignoring bundle size and not using code splitting
+4. ❌ Using template literals for class concatenation when `classnames` is available
+5. ❌ Skipping Storybook stories for reusable components
+6. ❌ Mixing API logic with component logic
+7. ❌ Not grouping related types and API functions
+8. ❌ Using `lodash` instead of `lodash-es`
+9. ❌ Excessive plugins in Vite config
+10. ❌ Not utilizing environment variables for config
+11. ❌ Ignoring bundle size and not using code splitting
 
 ## Summary Checklist
 
@@ -816,7 +864,8 @@ When developing React + Vite projects, ensure:
 
 - [ ] Project initialized with `npm create vite@latest -- --template react-ts`
 - [ ] Path aliases configured in both `vite.config.ts` and `tsconfig.json`
-- [ ] Components follow structure: `index.tsx`, `style.module.css`, `index.stories.ts`
+- [ ] Components follow structure: `index.tsx`, `styles.module.css`, `index.stories.ts`
+- [ ] Use `classnames` for all class concatenation (when installed)
 - [ ] Pages only import components, never define them
 - [ ] API functions grouped by domain in separate files
 - [ ] Types grouped by domain with optional `index.ts`

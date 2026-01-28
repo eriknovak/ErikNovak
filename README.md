@@ -7,23 +7,6 @@ Artificial Intelligence • Natural Language Processing • Cross-lingual Langua
 
 **Connect:** [LinkedIn] | [Homepage]
 
-## Development Environment
-
-This repository contains personal development environment configurations and dotfiles. To install, run:
-
-```bash
-./setup.sh
-```
-
-### Configuration Stack
-
-- **Shell:** Bash with [Starship](https://starship.rs/) prompt featuring Catppuccin Mocha theme
-- **Terminal Multiplexer:** Tmux with Catppuccin theme, vim-style key bindings, and TPM plugin management
-- **Text Editors:** Nano and Vim configured with syntax highlighting and custom themes
-- **Version Control:** Git with enhanced colorized output and productivity aliases (`lg`, `st`, `up`)
-- **Python Environment:** UV package manager with convenient aliases
-- **Node.js Runtime:** nvm (Node Version Manager) for version management
-
 ## Open Source Contributions
 
 ### Python Packages
