@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Claude Code Status Line Script
-# Displays: git:branch [status] • M: model • S: tokens percent% • L: usage% [progress bar] (XhYm left)
+# Displays: git:branch [status] • M: model • S: tokens pct% [progress bar]
 # With selective dimming on labels and separators
 
 # Read JSON input from stdin
@@ -79,53 +79,6 @@ else
     tokens_display="$total_tokens"
 fi
 
-# Calculate percentage of context window
-if [ "$context_size" -gt 0 ]; then
-    context_pct=$(echo "scale=0; $total_tokens * 100 / $context_size" | bc 2>/dev/null || echo "0")
-    tokens_display="${tokens_display} ${context_pct}%"
-fi
-
-# Calculate time until limit reset
-# Claude's context limits reset at midnight UTC
-reset_time=""
-if [ -n "$used_pct" ]; then
-    current_epoch=$(date +%s)
-    # Calculate seconds until next midnight UTC
-    current_day_start=$(date -u -d "today 00:00:00" +%s)
-    next_day_start=$((current_day_start + 86400))
-    seconds_until_reset=$((next_day_start - current_epoch))
-
-    # Convert to hours and minutes
-    hours=$((seconds_until_reset / 3600))
-    minutes=$(((seconds_until_reset % 3600) / 60))
-
-    if [ $hours -gt 0 ]; then
-        reset_time="${hours}h${minutes}m left"
-    else
-        reset_time="${minutes}m left"
-    fi
-fi
-
-# Build progress bar if we have usage percentage
-progress_bar=""
-if [ -n "$used_pct" ]; then
-    # Create a 10-character progress bar
-    bar_width=10
-    filled=$(printf "%.0f" $(echo "scale=0; $used_pct * $bar_width / 100" | bc 2>/dev/null || echo "0"))
-    empty=$((bar_width - filled))
-
-    # Build the bar
-    bar=""
-    for ((i=0; i<filled; i++)); do bar="${bar}█"; done
-    for ((i=0; i<empty; i++)); do bar="${bar}░"; done
-
-    progress_bar="[${bar}]"
-
-    # Format percentage
-    pct_display="$(printf "%.0f%%" "$used_pct")"
-else
-    pct_display=""
-fi
 
 # Assemble status line with selective dimming
 output=""
@@ -144,16 +97,24 @@ if [ -n "$output" ]; then
 fi
 output="${output}${DIM}M:${RESET} ${model}"
 
-# Session/tokens section with dimmed label
-output="$output $SEP ${DIM}S:${RESET} ${tokens_display}"
-
-# Usage section with dimmed label and time
+# Build context usage display: percentage and progress bar
+context_extra=""
 if [ -n "$used_pct" ]; then
-    output="$output $SEP ${DIM}L:${RESET} $pct_display $progress_bar"
-    if [ -n "$reset_time" ]; then
-        output="$output ${DIM}(${reset_time})${RESET}"
-    fi
+    pct_display="$(printf "%.0f%%" "$used_pct")"
+
+    # Progress bar
+    bar_width=10
+    filled=$(printf "%.0f" $(echo "scale=0; $used_pct * $bar_width / 100" | bc 2>/dev/null || echo "0"))
+    empty=$((bar_width - filled))
+    bar=""
+    for ((i=0; i<filled; i++)); do bar="${bar}█"; done
+    for ((i=0; i<empty; i++)); do bar="${bar}░"; done
+
+    context_extra=" ${pct_display} ${bar}"
 fi
+
+# Session/tokens section with dimmed label, percentage, progress bar, time
+output="$output $SEP ${DIM}S:${RESET} ${tokens_display}${context_extra}"
 
 # Use printf to properly handle ANSI codes
 printf "%b\n" "$output"
