@@ -1,54 +1,16 @@
 # Erik Novak
 
-**Data Scientist** at Event Registry
+[Website](https://ailab.ijs.si/eriknovak/) · [LinkedIn](https://www.linkedin.com/in/novakerik/) · [Google Scholar](https://scholar.google.com/citations?user=QKeReOoAAAAJ&hl=sl)
 
-### Research Focus
-Artificial Intelligence • Natural Language Processing • Cross-lingual Language Models • Semi-Automatic Text Processing • Data Visualization
+I'm a researcher in the Department for Artificial Intelligence at the
+[Jožef Stefan Institute](https://ailab.ijs.si/eriknovak/) and a data scientist at
+[Event Registry](https://eventregistry.org/), working on artificial intelligence,
+natural language processing, and cross-lingual language models.
 
-**Connect:** [LinkedIn] | [Homepage]
+## Projects
 
-## Open Source Contributions
+**[anonipy](https://github.com/eriknovak/anonipy)** &nbsp; ![PyPI](https://img.shields.io/pypi/v/anonipy) ![License](https://img.shields.io/pypi/l/anonipy)
+Data anonymization toolkit with LLM-powered entity detection and pluggable anonymization strategies.
 
-### Python Packages
-
-| **Package** | **Description** | **GitHub Stars** | **PyPI** |
-|-------------|-----------------|------------------|---------|
-| [anonipy](https://github.com/eriknovak/anonipy) | Data anonymization library supporting multiple anonymization strategies and techniques | ![Stars](https://img.shields.io/github/stars/eriknovak/anonipy) | ![PyPi](https://img.shields.io/pypi/v/anonipy?color=%2334D058)  |
-| [datachart](https://github.com/eriknovak/datachart) | Flexible data visualization library with simple API and extensive customization options | ![Stars](https://img.shields.io/github/stars/eriknovak/datachart) | ![PyPi](https://img.shields.io/pypi/v/datachart?color=%2334D058) |
-
-
-### Research Datasets
-
-| **Dataset** | **Description** | **GitHub Stars** | **Repository** |
-|-------------|-----------------|------------------|----------------|
-| [OG2021](https://github.com/E3-JSI/dataset-OG2021) | Comprehensive dataset from the 2021 Tokyo Olympics | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-OG2021) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1921)  |
-| [SloATOMIC 2020](https://github.com/E3-JSI/dataset-SloATOMIC-2020) | Slovene translation of the ATOMIC 2020 commonsense reasoning dataset | ![Stars](https://img.shields.io/github/stars/E3-JSI/dataset-SloATOMIC-2020) | [Clarin.si](https://www.clarin.si/repository/xmlui/handle/11356/1724) |
-
-### Project Templates
-
-#### Machine Learning with DVC
-
-**[eriknovak/cookiecutter-ml-dvc](https://github.com/eriknovak/cookiecutter-ml-dvc)** — Template for machine learning experiments using [DVC] for version control and reproducibility (in development).
-
-```bash
-# Install pipx for running cookiecutter
-pip install pipx
-# Create a new project using the template
-pipx run cookiecutter gh:eriknovak/cookiecutter-ml-dvc
-```
-
-#### Machine Learning on HPC Systems
-
-**[eriknovak/cookiecutter-ml-hpc](https://github.com/eriknovak/cookiecutter-ml-hpc)** — Template for machine learning experiments on HPC clusters with [SLURM] workload manager (in development).
-
-```bash
-# Install pipx for running cookiecutter
-pip install pipx
-# Create a new project using the template
-pipx run cookiecutter gh:eriknovak/cookiecutter-ml-hpc
-```
-
-[Homepage]: https://ailab.ijs.si/eriknovak/
-[LinkedIn]: https://www.linkedin.com/in/novakerik/
-[DVC]: https://dvc.org/
-[SLURM]: https://www.schedmd.com/slurm/
+**[datachart](https://github.com/eriknovak/datachart)** &nbsp; ![PyPI](https://img.shields.io/pypi/v/datachart) ![License](https://img.shields.io/pypi/l/datachart)
+Flexible data visualization library with a simple API and extensive customization.
