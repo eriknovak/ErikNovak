@@ -9,8 +9,7 @@ natural language processing, and cross-lingual language models.
 
 ## Projects
 
-**[anonipy](https://github.com/eriknovak/anonipy)** &nbsp; ![PyPI](https://img.shields.io/pypi/v/anonipy) ![License](https://img.shields.io/pypi/l/anonipy)
-Data anonymization toolkit with LLM-powered entity detection and pluggable anonymization strategies.
-
-**[datachart](https://github.com/eriknovak/datachart)** &nbsp; ![PyPI](https://img.shields.io/pypi/v/datachart) ![License](https://img.shields.io/pypi/l/datachart)
-Flexible data visualization library with a simple API and extensive customization.
+| Project | Description | Badges |
+|---------|-------------|--------|
+| [anonipy](https://github.com/eriknovak/anonipy) | Data anonymization toolkit with LLM-powered entity detection and pluggable anonymization strategies. | ![PyPI](https://img.shields.io/pypi/v/anonipy) ![License](https://img.shields.io/pypi/l/anonipy) |
+| [datachart](https://github.com/eriknovak/datachart) | Flexible data visualization library with a simple API and extensive customization. | ![PyPI](https://img.shields.io/pypi/v/datachart) ![License](https://img.shields.io/pypi/l/datachart) |
